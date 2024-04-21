@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 namespace first
 {
     int x = 2;
@@ -44,5 +45,47 @@ int main()
     EX>> x=4, and x=3, will give errors in c++ because, it has same variable name, so to avoid this we have namespace
     */
 
+    // alias
+    /*
+    typedef = used to create additional name(alias or nickname) for the another data type, helps readability and typepos
+    using = will works same as the typedef keywords
+
+    */
+    // typedef std::vector<std::pair<std::string, int>> pairlist_t;
+
+    // === ARITHMETIC OPERATORS
+    /*
+    works similar to js program operators
+    */
+
+    // data type conversions (implicit(done automatically), explicit(done manually))
+    // int correct = (double)90;
+
+    /* how to accept the user input using c++
+    cout << (insertion operator)
+    cin >> (extraction operator)
+    */
+
+   /*
+   
+   */
+
+    typedef std::string text_t;
+    using word_t = std::string;
+
+    text_t firstname = "tshewang";
+    word_t lastname = "gyaltshen";
+    std::cout << firstname << '\n';
+    std::cout << lastname << '\n';
+    int age1;
+
+    std::string name;
+    std::cout << "what's your name";
+    std::cin >> name;
+    std::getline(std::cin, name);
+    std::cout << "what's your age";
+    std::cin >> age1;
+    std::cout << "Hello" << name;
+    std::cout << "You are " << age1 << "old";
     return 0;
 }
