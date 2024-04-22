@@ -1,19 +1,30 @@
 #include <iostream>
 #include <vector>
-namespace first
-{
-    int x = 2;
-}
+// namespace first
+// {
+//     int x = 2;
+// }
 
-namespace second
+// namespace second
+// {
+//     int x = 3;
+// }
+
+// void functionName()
+// {
+//     std::cout << "Happy birthday to you";
+// }
+
+double square(double height)
 {
-    int x = 3;
+    return height * height;
 }
 
 // main functions
 int main()
 
 {
+    // functionName();
 
     // === datatypes in c++
     /*
@@ -29,16 +40,19 @@ int main()
     rest of the variables we can declare using the random characters
 
     */
-    int y = 4;
-    int age = 26;
-    const int AGE = 26;
-    std::string abmitions = "Billionaire";
-    double millionaire = 27.5;
-    bool billionaire = true;
-    char grade = 'A';
-    // std::cout << first::x;=
-    std::cout << "first::x = " << first::x << std::endl;
-    std::cout << "second::x = " << second::x << std::endl;
+    double height = 6.5;
+    double area = square(height);
+    std::cout << "Area" << area << std::endl;
+    // int y = 4;
+    // int age = 26;
+    // const int AGE = 26;
+    // std::string abmitions = "Billionaire";
+    // double millionaire = 27.5;
+    // bool billionaire = true;
+    // char grade = 'A';
+    // // std::cout << first::x;=
+    // std::cout << "first::x = " << first::x << std::endl;
+    // std::cout << "second::x = " << second::x << std::endl;
 
     /*
     namespace = it is used to avoid the conflicts between the same variable name
@@ -170,27 +184,68 @@ int main()
     || OR operators ->(even one condition true will be okay)
     ! NOT operators, all the logic will remain same as like javascript ->(will reverse the conditions)
     */
-    int temp;
-    std::cout << "Enter the temperature";
-    std::cin >> temp;
+    // int temp;
+    // std::cout << "Enter the temperature";
+    // std::cin >> temp;
 
-    if (temp > 0 && temp < 30)
-    {
-        std::cout << "the temperature is good";
-    }
-    else
-    {
-        std::cout << "the temperature if bad";
+    // if (temp > 0 && temp < 30)
+    // {
+    //     std::cout << "the temperature is good";
+    // }
+    // else
+    // {
+    //     std::cout << "the temperature if bad";
+    // }
+
+    // if (temp <= 0 || temp >= 30)
+    // {
+    //     std::cout << "the temperatur is bad";
+    // }
+    // else
+    // {
+    //     std::cout << "the temperatutre is good";
+    // }
+
+    // functions in c++. declaring
+    /*
+    void functionName(){
+        std::cout << "This is the function in c++", it is accessible to only within scope
     }
 
-    if (temp <= 0 || temp >= 30)
-    {
-        std::cout << "the temperatur is bad";
-    }
-    else
-    {
-        std::cout << "the temperatutre is good";
+    return = return a value back to the spot when you called the encompassing function
+
+    function in c++ and variable is similar, except c++ has (){}.
+    */
+
+    /*
+    calculating the area of the square
+
+    area of the square is = y * y = y**2
+
+    */
+
+    // lets create a function to calculate that height
+
+    /*
+    overloaded functions: the function with the same name but must have different parameters, that is called as overload function
+
+
+    void overload(){
+        std::cout << "This is the first function without any parameter";
     }
 
+    void overload(std::string topping1, std::string topping2); -> this is called the function declarations
+    void overload(std::string topping1, std::string topping2){
+        std::cout << "Here is your" << topping1 << "and" << topping2 << endl;
+    }
+
+    overload("pepper", "mushroom")-> this should be called inside int main(){}; this will function arguments
+    */
+
+    /*
+    variable scope
+    1. local variable, the variable declared inside the function or the block
+    2. global variables, the variable that is declared outside of all function is called global
+    */
     return 0;
 }
