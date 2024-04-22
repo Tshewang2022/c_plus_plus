@@ -36,7 +36,7 @@ int main()
     double millionaire = 27.5;
     bool billionaire = true;
     char grade = 'A';
-    // std::cout << first::x;
+    // std::cout << first::x;=
     std::cout << "first::x = " << first::x << std::endl;
     std::cout << "second::x = " << second::x << std::endl;
 
@@ -66,26 +66,131 @@ int main()
     cin >> (extraction operator)
     */
 
-   /*
-   
-   */
+    /*
+    statement
+    if statment= the code will get excuted only if its true
+    swtich = alternatives for using the "else if"; syntax remain same like the javascript
+    */
 
-    typedef std::string text_t;
-    using word_t = std::string;
+    // typedef std::string text_t;
+    // using word_t = std::string;
 
-    text_t firstname = "tshewang";
-    word_t lastname = "gyaltshen";
-    std::cout << firstname << '\n';
-    std::cout << lastname << '\n';
-    int age1;
+    // text_t firstname = "tshewang";
+    // word_t lastname = "gyaltshen";
+    // std::cout << firstname << '\n';
+    // std::cout << lastname << '\n';
+    // int age1;
+    // int age2;
 
-    std::string name;
-    std::cout << "what's your name";
-    std::cin >> name;
-    std::getline(std::cin, name);
-    std::cout << "what's your age";
-    std::cin >> age1;
-    std::cout << "Hello" << name;
-    std::cout << "You are " << age1 << "old";
+    // std::string name;
+    // std::cout << "what's your name";
+    // std::cin >> name;
+    // std::getline(std::cin, name);
+    // std::cout << "what's your age";
+    // std::cin >> age1;
+    // std::cout << "Hello" << name;
+    // std::cout << "You are " << age1 << "old";
+    // std::cout << "what's your age";
+    // std::cin >> age2;
+    // if (age2 >= 18)
+    // {
+    //     std::cout << "welcome to the site";
+    // }
+    // else
+    // {
+    //     std::cout << "you are not old enough to get into this site";
+    // }
+
+    // creating the calculator using the swtich statement
+
+    // char calcutate;
+    // double num1;
+    // double num2;
+    // double result;
+
+    // std::cout << "*********** calulator ************";
+    // std::cout << "Enter any (* / + -)";
+    // std::cin >> calcutate;
+
+    // std::cout << "Enter #1";
+    // std::cin >> num1;
+
+    // std::cout << "Enter #2";
+    // std::cin >> num2;
+
+    // switch (calcutate)
+    // {
+    // case '+':
+    //     result = num1 + num2;
+    //     std::cout << "result is: " << result << '\n';
+    //     break;
+    // case '-':
+    //     result = num1 - num2;
+    //     std::cout << "result is: " << result << '\n';
+    //     break;
+
+    // case '/':
+    //     result = num1 / num2;
+    //     std::cout << "result is: " << result << '\n';
+    //     break;
+
+    // default:
+    //     std::cout << "that wasnt a valid response";
+    //     break;
+    // }
+
+    // std::cout << "**********************************";
+
+    /*
+    ternary operator ?: = replacement to the if/else statement
+    condition ? expression 1 : expression 2;
+
+    */
+
+    // conventional if/else statement works
+    // double grade1 = 65;
+
+    // if (grade1 >= 60)
+    // {
+    //     std::cout << "you pass";
+    // }
+    // else
+    // {
+    //     std::cout << "you failed";
+    // }
+
+    // ternary operators
+
+    // (grade1 >= 60) ? std::cout << "you pass" : std::cout << "you failed";
+
+    /*
+    logical operators
+
+    && AND operators ->(both conditions need to be true)
+    || OR operators ->(even one condition true will be okay)
+    ! NOT operators, all the logic will remain same as like javascript ->(will reverse the conditions)
+    */
+    int temp;
+    std::cout << "Enter the temperature";
+    std::cin >> temp;
+
+    if (temp > 0 && temp < 30)
+    {
+        std::cout << "the temperature is good";
+    }
+    else
+    {
+        std::cout << "the temperature if bad";
+    }
+
+    if (temp <= 0 || temp >= 30)
+    {
+        std::cout << "the temperatur is bad";
+    }
+    else
+    {
+        std::cout << "the temperatutre is good";
+    }
+
     return 0;
 }
