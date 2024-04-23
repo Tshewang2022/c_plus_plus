@@ -34,7 +34,7 @@
 3. character = char(which will store only the single string)
 4. string = string(which all store list of characters)
 5. boolean = (true or false)
-
+6. arrays = should falls under the data types, but i am not sure of it
 
 // declaring the variables in c++
 const keywords are being used to declared constants that does not change the value, using the const keyword we need to upppercase the variable
@@ -360,136 +360,192 @@ there should be a function that makes both players interact with each other
 // char player;
 // char computer;
 // void choice( char rock, char paper, char scissors);
-char getPlayerChoice();
-char getComputerChoice();
-void showChoice(char choice); // rock || paper || scissors
-void Winner(char player, char computer);
 
+// *** rocker, paper, scissors game ****
+// char getPlayerChoice();
+// char getComputerChoice();
+// void showChoice(char choice); // rock || paper || scissors
+// void Winner(char player, char computer);
+
+// int main()
+// {
+//     char player;
+//     char computer;
+
+//     player = getPlayerChoice();
+//     std::cout << "your choice is: ";
+//     showChoice(player);
+
+//     computer = getComputerChoice();
+//     std::cout << "Computer choice: ";
+//     showChoice(computer);
+//     Winner(player, computer);
+//     // std::cout << "The winner of the game will get to learn 12 hours free c++ programing course !\n";
+//     return 0;
+// };
+
+// char getPlayerChoice()
+// {
+//     // should wrap the code inside the do{}while(){} loop, so to prevent enter other user value
+//     char player;
+//     do
+//     {
+//         std::cout << "Choose one of the followings";
+//         std::cout << "Rock-paper-scissors game\n";
+//         std::cout << "'r' for rock\n";
+//         std::cout << "'p' for paper\n";
+//         std::cout << "'s' for scissors\n";
+//         std::cin >> player;
+//         // std::cout << player;
+//     } while (player != 'r' && player != 'p' && player != 's');
+//     return player;
+// };
+
+// char getComputerChoice()
+// {
+//     srand(time(0));
+//     int num = rand() % 3 + 1;
+
+//     switch (num)
+//     {
+//     case 1:
+//         return 'r';
+//         break;
+//     case 2:
+//         return 'p';
+//         break;
+//     case 3:
+//         return 's';
+//         break;
+
+//     default:
+//         break;
+//     }
+//     return 0;
+// };
+
+// void showChoice(char choice)
+// {
+//     switch (choice)
+//     {
+//     case 'r':
+//         std::cout << "Rock\n";
+//         break;
+//     case 'p':
+//         std::cout << "Paper\n";
+//         break;
+//     case 's':
+//         std::cout << "Scissors\n";
+//         break;
+//         // default:
+//         //     std::cout << "";
+//         break;
+//     }
+// };
+
+// void Winner(char player, char computer)
+// {
+//     switch (player)
+//     {
+//     case 'r':
+//         if (computer == 'r')
+//         {
+//             std::cout << "its a tie !\n";
+//         }
+//         else if (computer == 'p')
+//         {
+//             std::cout << "You lose\n";
+//         }
+//         else
+//         {
+//             std::cout << "You have win the game, congrats\n";
+//         }
+
+//     case 's':
+//         if (computer == 's')
+//         {
+//             std::cout << "its a tie !\n";
+//         }
+//         else if (computer == 'r')
+//         {
+//             std::cout << "You lose\n";
+//         }
+//         else
+//         {
+//             std::cout << "You have win the game, congrats\n";
+//         }
+
+//     case 'p':
+//         if (computer == 'p')
+//         {
+//             std::cout << "its a tie !\n";
+//         }
+//         else if (computer == 'r')
+//         {
+//             std::cout << "You lose\n";
+//         }
+//         else
+//         {
+//             std::cout << "You have win the game, congrats\n";
+//         }
+//         /* code */
+//         break;
+
+//     default:
+//         break;
+//     }
+// };
+
+// *** arrays in c++, arrays is a variable that can hold lots of value with single variable ***
+// int main()
+// {
+//     std::string cars[] = {"volvo", "bmw", "ducati", "ktm"};
+//     std::cout << cars[0] << '\n';
+
+//     // sizeof() = use to determine the size of bytes of, variables, datatypes, class, objects, etc;
+//     /*
+//     1 bytes = 8 bits ( units for storing the information in computer system)
+
+//     */
+//     // *** method to iterate over the arrays, or loop over the arrays in c+++ ***
+//     std::string students[] = {"tshewang", "gyaltshen", "nima"};
+/*
+we are going the use the for() loop to iterate over the arrays in c++
+but what if need to make changes, such as remove or add into the exsiting arrays. But the for() iterates ovver only fix numbers
+so, in this case we need to use the sizeof() in c++, in js where we use length method.
+*/
+
+//     for (int i = 0; i < sizeof(students) / sizeof(std::string); i++)
+//     {
+//         std::cout << students[i] << '\n';
+//     }
+
+//     // double grade = 1;
+//     // std::cout << sizeof(double) << "  bytes\n";
+
+//     /*
+//     how to pass the arrays to the functions
+
+//     */
+// }
+double getTotal(double prices[], int size)
+{
+    double total = 0;
+
+    for (int i = 0; i < size; i++)
+    {
+        total += prices[i];
+    }
+    return total;
+}
+
+// when passing the arrays inside the function(This is related to the function declarations), you dont need to pass the array, you have to just pass the array name;
+// however when the function recieves the array as the parameters, it decays into the POINTER.
 int main()
 {
-    char player;
-    char computer;
-
-    player = getPlayerChoice();
-    std::cout << "your choice is: ";
-    showChoice(player);
-
-    computer = getComputerChoice();
-    std::cout << "Computer choice: ";
-    showChoice(computer);
-    Winner(player, computer);
-    // std::cout << "The winner of the game will get to learn 12 hours free c++ programing course !\n";
+    double prices[] = {1, 2, 3, 4, 5};
+    int size = sizeof(prices) / sizeof(double);
+    double total = getTotal(prices, size);
+    std::cout << "total: " << total << '\n';
     return 0;
-};
-
-char getPlayerChoice()
-{
-    // should wrap the code inside the do{}while(){} loop, so to prevent enter other user value
-    char player;
-    do
-    {
-        std::cout << "Choose one of the followings";
-        std::cout << "Rock-paper-scissors game\n";
-        std::cout << "'r' for rock\n";
-        std::cout << "'p' for paper\n";
-        std::cout << "'s' for scissors\n";
-        std::cin >> player;
-        // std::cout << player;
-    } while (player != 'r' && player != 'p' && player != 's');
-    return player;
-};
-
-char getComputerChoice()
-{
-    srand(time(0));
-    int num = rand() % 3 + 1;
-
-    switch (num)
-    {
-    case 1:
-        return 'r';
-        break;
-    case 2:
-        return 'p';
-        break;
-    case 3:
-        return 's';
-        break;
-
-    default:
-        break;
-    }
-    return 0;
-};
-
-void showChoice(char choice)
-{
-    switch (choice)
-    {
-    case 'r':
-        std::cout << "Rock\n";
-        break;
-    case 'p':
-        std::cout << "Paper\n";
-        break;
-    case 's':
-        std::cout << "Scissors\n";
-        break;
-        // default:
-        //     std::cout << "";
-        break;
-    }
-};
-
-void Winner(char player, char computer)
-{
-    switch (player)
-    {
-    case 'r':
-        if (computer == 'r')
-        {
-            std::cout << "its a tie !\n";
-        }
-        else if (computer == 'p')
-        {
-            std::cout << "You lose\n";
-        }
-        else
-        {
-            std::cout << "You have win the game, congrats\n";
-        }
-
-    case 's':
-        if (computer == 's')
-        {
-            std::cout << "its a tie !\n";
-        }
-        else if (computer == 'r')
-        {
-            std::cout << "You lose\n";
-        }
-        else
-        {
-            std::cout << "You have win the game, congrats\n";
-        }
-
-    case 'p':
-        if (computer == 'p')
-        {
-            std::cout << "its a tie !\n";
-        }
-        else if (computer == 'r')
-        {
-            std::cout << "You lose\n";
-        }
-        else
-        {
-            std::cout << "You have win the game, congrats\n";
-        }
-        /* code */
-        break;
-
-    default:
-        break;
-    }
-};
+}
