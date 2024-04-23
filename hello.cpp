@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <ctime>
 // namespace first
 // {
 //     int x = 2;
@@ -254,92 +255,241 @@ variable scope
 /*
 lets see how my leg will get blown off, if i write my programe in c++
 
+// */
+// char enter;
+// void showBalance(double balance);
+// double withdrawl(double balance);
+// double deposit();
+
+// int main()
+// {
+//     double balance = 0;
+//     int choice = 0;
+//     do
+//     {
+//         std::cout << "******welcome to the bank*****\n";
+//         std::cout << "Enter your choice: \n";
+//         std::cout << "1. Show Balance\n";
+//         std::cout << "2. Deposit Money\n";
+//         std::cout << "3. Withdraw Money\n";
+//         std::cout << "4. Exit\n";
+//         std::cin >> choice;
+//         std::cin.clear();
+//         fflush(stdin);
+
+//         switch (choice)
+//         {
+//         case 1:
+//             showBalance(balance);
+//             break;
+
+//         case 2:
+//             balance += deposit();
+//             showBalance(balance);
+//             break;
+
+//         case 3:
+//             balance -= withdrawl(balance);
+//             showBalance(balance);
+
+//         case 4:
+//             std::cout << "Thanks for visiting us \n44";
+
+//         default:
+//             std::cout << "Invalid choice\n";
+//         }
+
+//     } while (choice != 4);
+// }
+
+// /*
+// functions
+
+// */
+// void showBalance(double balance)
+// {
+//     std::cout << "Your balance is : $" << balance << '\n';
+// };
+
+// double deposit()
+// {
+//     double amount = 0;
+//     std::cout << "Enter amout to be deposited: \n";
+//     std::cin >> amount;
+//     return amount;
+//     if (amount > 0)
+//     {
+//         std::cout << "That's not a valid amount: \n";
+//         return 0;
+//     }
+// };
+
+// double withdrawl(double balance)
+// {
+//     double amount = 0;
+//     std::cout << "Enter the amount to be withdrawn: \n";
+//     std::cin >> amount;
+//     if (amount > balance)
+//     {
+//         std::cout << "Insufficient fund, please make deposite before withdrawling the account";
+//     }
+//     else if (amount < 0)
+//     {
+//         std::cout << "that is not a valid amount \n";
+//         return 0;
+//     }
+//     else
+//     {
+//         return amount;
+//     }
+//     return 0;
+// };
+
+// concept of the game
+/*
+there will be two players, one computer and another one will be player 1
+
+there should be a function that makes both players interact with each other
+1. function play (player and computer)
+2. function that gives choice for the both the users, (players will have, rock, paper and scissors) && computers too
+3. function that will decide who is the winner of the game( computer or player)
+3.  conditions that loops over another players, deciding which is winner, so best would be the switch statements
 */
-char enter;
-void showBalance(double balance);
-double withdrawl(double balance);
-double deposit();
+
+// data init
+// char player;
+// char computer;
+// void choice( char rock, char paper, char scissors);
+char getPlayerChoice();
+char getComputerChoice();
+void showChoice(char choice); // rock || paper || scissors
+void Winner(char player, char computer);
 
 int main()
 {
-    double balance = 0;
-    int choice = 0;
+    char player;
+    char computer;
+
+    player = getPlayerChoice();
+    std::cout << "your choice is: ";
+    showChoice(player);
+
+    computer = getComputerChoice();
+    std::cout << "Computer choice: ";
+    showChoice(computer);
+    Winner(player, computer);
+    // std::cout << "The winner of the game will get to learn 12 hours free c++ programing course !\n";
+    return 0;
+};
+
+char getPlayerChoice()
+{
+    // should wrap the code inside the do{}while(){} loop, so to prevent enter other user value
+    char player;
     do
     {
-        std::cout << "******welcome to the bank*****\n";
-        std::cout << "Enter your choice: \n";
-        std::cout << "1. Show Balance\n";
-        std::cout << "2. Deposit Money\n";
-        std::cout << "3. Withdraw Money\n";
-        std::cout << "4. Exit\n";
-        std::cin >> choice;
-        std::cin.clear();
-        fflush(stdin);
-
-        switch (choice)
-        {
-        case 1:
-            showBalance(balance);
-            break;
-
-        case 2:
-            balance += deposit();
-            showBalance(balance);
-            break;
-
-        case 3:
-            balance -= withdrawl(balance);
-            showBalance(balance);
-
-        case 4:
-            std::cout << "Thanks for visiting us \n44";
-
-        default:
-            std::cout << "Invalid choice\n";
-        }
-
-    } while (choice != 4);
-}
-
-/*
-functions
-
-*/
-void showBalance(double balance)
-{
-    std::cout << "Your balance is : $" << balance << '\n';
+        std::cout << "Choose one of the followings";
+        std::cout << "Rock-paper-scissors game\n";
+        std::cout << "'r' for rock\n";
+        std::cout << "'p' for paper\n";
+        std::cout << "'s' for scissors\n";
+        std::cin >> player;
+        // std::cout << player;
+    } while (player != 'r' && player != 'p' && player != 's');
+    return player;
 };
 
-double deposit()
+char getComputerChoice()
 {
-    double amount = 0;
-    std::cout << "Enter amout to be deposited: \n";
-    std::cin >> amount;
-    return amount;
-    if (amount > 0)
-    {
-        std::cout << "That's not a valid amount: \n";
-        return 0;
-    }
-};
+    srand(time(0));
+    int num = rand() % 3 + 1;
 
-double withdrawl(double balance)
-{
-    double amount = 0;
-    std::cout << "Enter the amount to be withdrawn: \n";
-    std::cin >> amount;
-    if (amount > balance)
+    switch (num)
     {
-        std::cout << "Insufficient fund, please make deposite before withdrawling the account";
-    }
-    else if (amount < 0)
-    {
-        std::cout << "that is not a valid amount \n";
-        return 0;
-    }
-    else
-    {
-        return amount;
+    case 1:
+        return 'r';
+        break;
+    case 2:
+        return 'p';
+        break;
+    case 3:
+        return 's';
+        break;
+
+    default:
+        break;
     }
     return 0;
+};
+
+void showChoice(char choice)
+{
+    switch (choice)
+    {
+    case 'r':
+        std::cout << "Rock\n";
+        break;
+    case 'p':
+        std::cout << "Paper\n";
+        break;
+    case 's':
+        std::cout << "Scissors\n";
+        break;
+        // default:
+        //     std::cout << "";
+        break;
+    }
+};
+
+void Winner(char player, char computer)
+{
+    switch (player)
+    {
+    case 'r':
+        if (computer == 'r')
+        {
+            std::cout << "its a tie !\n";
+        }
+        else if (computer == 'p')
+        {
+            std::cout << "You lose\n";
+        }
+        else
+        {
+            std::cout << "You have win the game, congrats\n";
+        }
+
+    case 's':
+        if (computer == 's')
+        {
+            std::cout << "its a tie !\n";
+        }
+        else if (computer == 'r')
+        {
+            std::cout << "You lose\n";
+        }
+        else
+        {
+            std::cout << "You have win the game, congrats\n";
+        }
+
+    case 'p':
+        if (computer == 'p')
+        {
+            std::cout << "its a tie !\n";
+        }
+        else if (computer == 'r')
+        {
+            std::cout << "You lose\n";
+        }
+        else
+        {
+            std::cout << "You have win the game, congrats\n";
+        }
+        /* code */
+        break;
+
+    default:
+        break;
+    }
 };
