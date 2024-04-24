@@ -549,3 +549,5 @@ int main()
     std::cout << "total: " << total << '\n';
     return 0;
 }
+
+// today whole day, i havent touched the code. feeling bit drained out today
