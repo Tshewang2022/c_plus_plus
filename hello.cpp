@@ -528,26 +528,112 @@ so, in this case we need to use the sizeof() in c++, in js where we use length m
 
 //     */
 // }
-double getTotal(double prices[], int size)
-{
-    double total = 0;
+// double getTotal(double prices[], int size)
+// {
+//     double total = 0;
 
-    for (int i = 0; i < size; i++)
-    {
-        total += prices[i];
-    }
-    return total;
-}
+//     for (int i = 0; i < size; i++)
+//     {
+//         total += prices[i];
+//     }
+//     return total;
+// }
 
-// when passing the arrays inside the function(This is related to the function declarations), you dont need to pass the array, you have to just pass the array name;
-// however when the function recieves the array as the parameters, it decays into the POINTER.
-int main()
-{
-    double prices[] = {1, 2, 3, 4, 5};
-    int size = sizeof(prices) / sizeof(double);
-    double total = getTotal(prices, size);
-    std::cout << "total: " << total << '\n';
-    return 0;
-}
+// // when passing the arrays inside the function(This is related to the function declarations), you dont need to pass the array, you have to just pass the array name;
+// // however when the function recieves the array as the parameters, it decays into the POINTER.
+// int main()
+// {
+//     double prices[] = {1, 2, 3, 4, 5};
+//     int size = sizeof(prices) / sizeof(double);
+//     double total = getTotal(prices, size);
+//     std::cout << "total: " << total << '\n';
+//     return 0;
+// }
 
 // today whole day, i havent touched the code. feeling bit drained out today
+// yeah i am back on the same day, feeling motivated to learn more and do more things.
+/*
+*** LESSSONS OF THE DAY****
+The most important things that you need to remember before learning anything
+1. ATTENSION, giving 100% attention to anything that you do. Put off the notifications for all the device. This will help you in registrations
+2. Comprehension: Understanding what you are doing, and how that works. This will help in retension.
+3. Applicatons-> so many people learn so many skills, but they do no apply. Thats why, do no recall much.
+All the steps needs to be on your finger tips, so practice everyday.
+*/
+
+/*
+Searching elements inside the arrays
+*/
+//  This is the linear search
+// int searchArray(int array[], int size, int element)
+// {
+//     for (int i = 0; i < size; i++)
+//     {
+//         if (array[i] == element)
+//         {
+//             return i;
+//         }
+//     }
+//     return -1;
+// }
+// int main()
+// {
+//     int numbers[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+//     int size = sizeof(numbers) / sizeof(numbers[0]);
+//     int index;
+//     int myNum;
+
+//     std::cout << "Enter element to search for: \n";
+//     std::cin >> myNum;
+//     index = searchArray(numbers, size, myNum);
+//     if (index != -1)
+//     {
+//         std::cout << myNum << " is at index " << index << '\n';
+//     }
+//     else
+//     {
+//         std::cout << "The number that you have enter is not in the arrays\n";
+//     }
+//     return 0;
+// }
+
+/*
+How to sort the array
+Types of sorting in c++
+1. Bubble sort = if(index[0] > index[1]){
+    std::cout << "index[0] of the array will move to index[1], by swaping the position";
+}else{
+    std::cout << "The position of the array will remain same, untill all the arrays are in orders";
+}
+*/
+// coding the buddle sort array
+// the function sort the array 
+void sort(int array[], int size)
+{
+    int temp; // creating the temporary variable to store the value
+    for (int i = 0; i < size - 1; i++)
+    {
+        for (int j = 0; j < size - i - 1; j++)
+        {
+            if (array[j] > array[j + 1])
+            {
+
+                temp = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = temp;
+            }
+        }
+    }
+}
+int main()
+{
+    int array[] = {10, 1, 6, 4, 52, 9, 0, 4, 2};
+    int size = sizeof(array) / sizeof(array[0]);
+    sort(array, size);
+
+    for (int element : array)
+    {
+        std::cout << element << " ";
+    }
+    return 0;
+}
