@@ -607,33 +607,52 @@ Types of sorting in c++
 }
 */
 // coding the buddle sort array
-// the function sort the array 
-void sort(int array[], int size)
-{
-    int temp; // creating the temporary variable to store the value
-    for (int i = 0; i < size - 1; i++)
-    {
-        for (int j = 0; j < size - i - 1; j++)
-        {
-            if (array[j] > array[j + 1])
-            {
+// the function sort the array
+// void sort(int array[], int size)
+// {
+//     int temp; // creating the temporary variable to store the value
+//     for (int i = 0; i < size - 1; i++)
+//     {
+//         for (int j = 0; j < size - i - 1; j++)
+//         {
+//             if (array[j] > array[j + 1])
+//             {
 
-                temp = array[j];
-                array[j] = array[j + 1];
-                array[j + 1] = temp;
-            }
-        }
-    }
-}
+//                 temp = array[j];
+//                 array[j] = array[j + 1];
+//                 array[j + 1] = temp;
+//             }
+//         }
+//     }
+// }
+// int main()
+// {
+//     int array[] = {10, 1, 6, 4, 52, 9, 0, 4, 2};
+//     int size = sizeof(array) / sizeof(array[0]);
+//     sort(array, size);
+
+//     for (int element : array)
+//     {
+//         std::cout << element << " ";
+//     }
+//     return 0;
+// }
+
+// how to accept the user input inside the array
 int main()
 {
-    int array[] = {10, 1, 6, 4, 52, 9, 0, 4, 2};
-    int size = sizeof(array) / sizeof(array[0]);
-    sort(array, size);
-
-    for (int element : array)
+    std::string foods[5];
+    int size = sizeof(foods) / sizeof(foods[0]);
+    for (int i = 1; i < size; i++)
     {
-        std::cout << element << " ";
+        std::cout << "Enter a food you like : #" << i << ": ";
+        std::getline(std::cin, foods[i]);
+    }
+    std::cout << "You like the following foods: \n";
+
+    for (std::string food : foods)
+    {
+        std::cout << food << '\n';
     }
     return 0;
 }
