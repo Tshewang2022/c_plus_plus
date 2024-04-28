@@ -639,20 +639,49 @@ Types of sorting in c++
 // }
 
 // how to accept the user input inside the array
+// int main()
+// {
+//     std::string foods[5];
+//     int size = sizeof(foods) / sizeof(foods[0]);
+//     for (int i = 1; i < size; i++)
+//     {
+//         std::cout << "Enter a food you like : #" << i << ": ";
+//         std::getline(std::cin, foods[i]);
+//     }
+//     std::cout << "You like the following foods: \n";
+
+//     for (std::string food : foods)
+//     {
+//         std::cout << food << '\n';
+//     }
+//     return 0;
+// }
+
+/*
+will be creating the quiz question game using the c++ languages
+*/
+
+// int main()
+// {
+//     std::cout << "Welcome to the quiz questions";
+//     std::string questions[] = {'1. what year was c++ created?: '},
+//                 {"2. who invented c+++?: "},
+//                 {"3. what is the predecessor of c++?: "},
+//                 {"4.Is the Earth Flat?: "}
+
+//                 std::string options[][4] = {{"a. 1969", "b.1975", "c. 1985", "d. 1999"}, {'a.guido van Rossan', "b. Bjarne Stroustrup", "c.Jhon Cenna", "d. Thomas Eddison"}, {'a. yes', "b. no", "c. sometimes", "d. what's earth?"}};
+//     char answersKey[] = { "c",
+//                           "b",
+//                           "c",
+//                           "a" }
+
+//     return 0;
+// }
+// memory address = location where the data has been stored is called as the memory address and can be access with the &operators, all will be in the hexa-decimal
+
 int main()
 {
-    std::string foods[5];
-    int size = sizeof(foods) / sizeof(foods[0]);
-    for (int i = 1; i < size; i++)
-    {
-        std::cout << "Enter a food you like : #" << i << ": ";
-        std::getline(std::cin, foods[i]);
-    }
-    std::cout << "You like the following foods: \n";
-
-    for (std::string food : foods)
-    {
-        std::cout << food << '\n';
-    }
+    std::string name = "tshewang";
+    std::cout << &name << '\n';
     return 0;
 }
