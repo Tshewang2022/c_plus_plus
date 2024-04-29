@@ -679,9 +679,97 @@ will be creating the quiz question game using the c++ languages
 // }
 // memory address = location where the data has been stored is called as the memory address and can be access with the &operators, all will be in the hexa-decimal
 
+// int main()
+// {
+//     std::string name = "tshewang";
+//     std::cout << &name << '\n';
+//     return 0;
+// }
+/*
+c++ Functions contains four parts
+1. return type (int)
+2.  functionName(main)
+3. functionParameter()
+4. function body
+
+when are using namespace defined by the c++, we should be using the std:: which means standard, example, std::string, that means we using the we are using the string that is
+defined in c++ libaries
+
+standard libary has 4 input and output objects(IO)
+1. for output, ostream, which is "cout" ( which means character out-> output)
+2. for input, istream, which is "cin" (which means input-> input)
+3. for error, which is "cerr",(which means error)
+4. for history, which is "clog", (which will show all the history)
+*/
+
+/*
+oop concepts in c++
+object, class, methods and constructors(does not have return types, have same name like class, public)
+*/
+using std::string;
+
+// this will act as the model for the employee, and by defualt the class are in private, so you cannot access from the object
+// class Employee
+// {
+//     // this are called the attributes
+//     // private:
+//     // the methods are being defined class
+// public:
+//     /*
+//     There are four main concepts in oop
+//     1. incapsulations-> hiding the properties of the class (data) from the others and setting them to methods by setting them as the setter and getters functions
+//     2. abstractions-> hiding the complex things from the user, and only displaying the simple things
+//     3. inheritance-> just like a genetics in biology
+//     4. polymorphism->
+//     */
+// private:
+//     string Name;
+//     string Company;
+//     int Age;
+//     void IntroduceYourself()
+//     {
+//         std::cout << "Name is " << Name << '\n';
+//         std::cout << "Age is " << Age << '\n';
+//         std::cout << "Company is " << Company << '\n';
+//     };
+//     // this is the constructors, and will init the newly created objects, the default constructors does not have value
+//     Employee(string name, string company, int age)
+//     {
+//         Name = name;
+//         Company = company;
+//         Age = age;
+//     }
+// };
+
+// // creating the object of the class employee
+// int main()
+// {
+
+//     Employee employee1 = Employee("tshewang", "Google", 26);
+//     // employee1.name = "tshewang";
+//     // employee1.company = "google";
+//     // employee1.age = 25;
+//     employee1.IntroduceYourself();
+// }
+
+// int main()
+// {
+// std:
+//     int age = 26;
+//     if (age >= 18)
+//     {
+//         std::cout << "Your are adult now" << '\n';
+//     }
+//     return 0;
+// }
+
+// ternary opertors to replace the if...else conditions
+
 int main()
 {
-    std::string name = "tshewang";
-    std::cout << &name << '\n';
+    int age = 10;
+    string result;
+    result = (age >= 18) ? "Your are an adult(this will excute if it is true)" : "You are not a adult(this will excute if only its false)";
+    std::cout << result << '\n';
     return 0;
 }
