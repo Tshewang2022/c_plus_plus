@@ -765,11 +765,60 @@ using std::string;
 
 // ternary opertors to replace the if...else conditions
 
+// int main()
+// {
+//     int age = 10;
+//     string result;
+//     result = (age >= 18) ? "Your are an adult(this will excute if it is true)" : "You are not a adult(this will excute if only its false)";
+//     std::cout << result << '\n';
+//     return 0;
+// }
+
+/*
+Declaring the class, objects in the programing languages
+class-> it is the user-defined data, which will act as the model for individual objects
+objects-> it will have the data field for which will have attributes and propperties of the particular objects
+attributes->object has the data stored inside attributes( the properties that particular objects has)
+methods-> it is the function that descript the objects.
+*/
+
+// declaring the class and objects
+using std::string;
+class Employees
+{
+    // attributes
+public:
+    int age;
+    int height;
+    string name;
+    string company;
+
+    // methods-> that will describe the objects
+    int yourdetails()
+    {
+        std::cout << age << '\n';
+        std::cout << height << '\n';
+        std::cout << name << '\n';
+        std::cout << company << '\n';
+    };
+    // defining the constructors
+    Employees(int Age, int Height, string Name, string Company)
+    {
+        age = Age;
+        height = Height;
+        name = Name;
+        company = Company;
+    };
+};
 int main()
 {
-    int age = 10;
-    string result;
-    result = (age >= 18) ? "Your are an adult(this will excute if it is true)" : "You are not a adult(this will excute if only its false)";
-    std::cout << result << '\n';
+    // defining the objects, employee1 is the object that is classfied under the class "Employees";
+    Employees employee1(23, 34, "Tshewang", "Amazon");
+    // employee1.age = 24;
+    // employee1.height = 24;
+    // employee1.name = "tshewang";
+    // employee1.company = "Google";
+    // how to refactor this code, we can do that by using the constructors
+    employee1.yourdetails();
     return 0;
 }
