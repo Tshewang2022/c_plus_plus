@@ -783,42 +783,96 @@ methods-> it is the function that descript the objects.
 */
 
 // declaring the class and objects
-using std::string;
-class Employees
-{
-    // attributes
-public:
-    int age;
-    int height;
-    string name;
-    string company;
+// using std::string;
+// class Employees
+// {
+//     // attributes
+// public:
+//     int age;
+//     int height;
+//     string name;
+//     string company;
 
-    // methods-> that will describe the objects
-    int yourdetails()
-    {
-        std::cout << age << '\n';
-        std::cout << height << '\n';
-        std::cout << name << '\n';
-        std::cout << company << '\n';
-    };
-    // defining the constructors
-    Employees(int Age, int Height, string Name, string Company)
-    {
-        age = Age;
-        height = Height;
-        name = Name;
-        company = Company;
-    };
-};
-int main()
-{
-    // defining the objects, employee1 is the object that is classfied under the class "Employees";
-    Employees employee1(23, 34, "Tshewang", "Amazon");
-    // employee1.age = 24;
-    // employee1.height = 24;
-    // employee1.name = "tshewang";
-    // employee1.company = "Google";
-    // how to refactor this code, we can do that by using the constructors
-    employee1.yourdetails();
-    return 0;
-}
+//     // methods-> that will describe the objects
+//     int yourdetails()
+//     {
+//         std::cout << age << '\n';
+//         std::cout << height << '\n';
+//         std::cout << name << '\n';
+//         std::cout << company << '\n';
+//     };
+//     // defining the constructors
+//     Employees(int Age, int Height, string Name, string Company)
+//     {
+//         age = Age;
+//         height = Height;
+//         name = Name;
+//         company = Company;
+//     };
+// };
+// int main()
+// {
+//     // defining the objects, employee1 is the object that is classfied under the class "Employees";
+//     Employees employee1(23, 34, "Tshewang", "Amazon");
+//     // employee1.age = 24;
+//     // employee1.height = 24;
+//     // employee1.name = "tshewang";
+//     // employee1.company = "Google";
+//     // how to refactor this code, we can do that by using the constructors
+//     employee1.yourdetails();
+//     return 0;
+// }
+
+// day2 of mastering the OOPs concepts in c++
+/*
+Programming-> based on the object manipulation rather than the functions and logics are called as the oops concepts
+which the objects are being classified into, objects and class
+objects is the subset of the class, where class is known as the user defined datatypes
+
+the class will have methods-> it is the function that describe the objects
+objects-> it is the data field
+
+Below function is the main concepts
+1. class
+2. methods
+3. objects
+4. constructors-> will reduce the code duplications, and wil initialized the newly created object
+
+*/
+using std::string;
+// class fruits
+// {
+//     // this are the user-defined datas
+// public:
+//     string Color;
+//     string Taste;
+//     int Size;
+
+//     void result()
+//     {
+//         std::cout << Color << '\n';
+//         std::cout << Taste << '\n';
+//         std::cout << Size << '\n';
+//         // return 0;
+//     }
+//     // the constructor will have the same name as the class
+// public:
+//     fruits(string color, string taste, int size)
+//     {
+//         Color = color;
+//         Taste = taste;
+//         Size = size;
+//     };
+// };
+// int main()
+// {
+//     // should be defining the objects
+//     fruits apple("red", "sour", 12);
+//     // apple.Color = "red";
+//     // apple.Size = 12;
+//     // apple.Taste = "sour";
+//     apple.result();
+//     // now we need method, to called this objects, so the methods should be defined inside the class.
+//     return 0;
+// }
+// this how to constructors , class and objects works in oops concepts;
