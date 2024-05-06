@@ -1056,7 +1056,7 @@ using std::string;
 class Fruits
 {
     // defining the user-datas inside the class
-public:
+private:
     string Color;
     string Name;
     int Size;
@@ -1085,4 +1085,4 @@ int main()
     // defining the objects inside the main functions
     Fruits groundFruits = Fruits("pineapple", "green", 23);
     groundFruits.fruitsdetials();
-}
+};
