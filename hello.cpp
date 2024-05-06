@@ -706,7 +706,7 @@ standard libary has 4 input and output objects(IO)
 oop concepts in c++
 object, class, methods and constructors(does not have return types, have same name like class, public)
 */
-using std::string;
+// using std::string;
 
 // this will act as the model for the employee, and by defualt the class are in private, so you cannot access from the object
 // class Employee
@@ -839,7 +839,7 @@ Below function is the main concepts
 4. constructors-> will reduce the code duplications, and wil initialized the newly created object
 
 */
-using std::string;
+// using std::string;
 // class fruits
 // {
 //     // this are the user-defined datas
@@ -876,3 +876,160 @@ using std::string;
 //     return 0;
 // }
 // this how to constructors , class and objects works in oops concepts;
+
+// mastering the four main pillars of oops concepts
+/*
+1. abstractions-> this will make another developer easy to work with our code, because, complex part will be hidden
+2. inheritance -> will reduce the code duplications where, the new class will inheritate properties fromm the parent class
+3. polymorphism -> will group the variables and function of the simlar kind to one group so that we can bundle them to reduce the code
+4. incapsulations->some parts of the data will be hidden, will the third party  cannot modify it. maybe for the security reason
+*/
+
+// INCAPSULATIONS-> hiding the user defined data and making it private scope is called the incapsulation, can be done using the setter and getter functions
+// using std::string;
+// class cars
+// {
+//     // first process of incapsulation is making the class private
+// public:
+//     string Name;
+//     string Brand;
+//     int Numbers;
+
+//     // second method is setting the setter and getter function for private class to access
+
+//     // this is the setter function
+//     void setName(string name)
+//     {
+//         Name = name;
+//     }
+
+//     // this is the getter function
+//     void getName()
+//     {
+//         return Name;
+//     };
+
+//     void setBrand(string brand)
+//     {
+//         Brand = brand;
+//     };
+//     void getBrand()
+//     {
+//         return Brand;
+//     };
+
+//     void setNumbers(int num1)
+//     {
+//         Numbers = num1;
+//     };
+//     void getNumbers()
+//     {
+//         return Numbers;
+//     };
+
+//     // methods
+//     void output()
+//     {
+//         std::cout << Name << '\n';
+//         std::cout << Brand << '\n';
+//         std::cout << Numbers << '\n';
+//     };
+//     cars(string name, string brand, int numbers){
+//         name = Name,
+//         brand = Brand,
+//         numbers = Numbers,
+//     };
+// };
+
+// // creating the objects of class cars
+
+// int main()
+// {
+//     cars bmw = bmw("bmw", "ducati", 2);
+//     // bmw.Name = "bmw-299";
+//     // bmw.Brand = "bmw";
+//     // bmw.Numbers = 100;
+//     bmw.output();
+//     bmw.setName("ducati");
+//     std::cout << bmw.getName() << " is " << bmw.getName() << " ";
+// };
+
+using std::string;
+class Employees
+{
+    // attributes
+private:
+    int Age;
+    int Height;
+    string Name;
+    string Company;
+
+    // setting the setters and getters, to access the private class
+
+    void setAge(string age)
+    {
+        age = Age;
+    };
+    void getAge()
+    {
+        return Age;
+    }
+    void setHeight(string height)
+    {
+        height = Height;
+    };
+    void getHeight()
+    {
+        return Height;
+    };
+
+    void setName(string name)
+    {
+        name = Name;
+    }
+    void getName()
+    {
+        return Name;
+    }
+
+    void setCompany(string company)
+    {
+        company = Company;
+    }
+    void getCompany()
+    {
+        return Company;
+    }
+
+    // methods-> that will describe the objects
+    void yourdetails()
+    {
+        std::cout << Age << '\n';
+        std::cout << Height << '\n';
+        std::cout << Name << '\n';
+        std::cout << Company << '\n';
+    };
+    // defining the constructors
+    Employees(int age, int height, string name, string company)
+    {
+        Age = age;
+        Height = height;
+        Name = name;
+        Company = company;
+    };
+};
+int main()
+{
+    // defining the objects, employee1 is the object that is classfied under the class "Employees";
+    Employees employee1 = Employees(23, 34, "Tshewang", "Amazon");
+    // employee1.age = 24;
+    // employee1.height = 24;
+    // employee1.name = "tshewang";
+    // employee1.company = "Google";
+    // how to refactor this code, we can do that by using the constructors
+    employee1.yourdetails();
+    employee1.setAge(30);
+    std::cout << employee1.getName() << " is " << employee1.getAge() << "years old \n";
+
+    return 0;
+}
