@@ -957,124 +957,139 @@ Below function is the main concepts
 // incapsulation
 using std::string;
 // setting abstract class
-class AbstractEmployee
-{
-    virtual void AskForPromotion() = 0;
-};
+// class AbstractEmployee
+// {
+//     virtual void AskForPromotion() = 0;
+// };
 
 // inheriting the class employees to Developer class
-class Developer : Employees
-{
-public:
-    string FavProgrammingLanguage;
-};
-class Employees : AbstractEmployee
-{
-    // attributes
-private:
-    int Age;
-    int Height;
-    string Name;
-    string Company;
 
-    // setting the setters and getters, to access the private class
-public:
-    void setAge(int age)
-    {
-        if (age >= 18)
-            // setter
-            age = Age;
-    };
-    int getAge()
-    {
-        // getter
-        return Age;
-    }
-    void setHeight(int height)
-    {
-        height = Height;
-    };
-    int getHeight()
-    {
-        return Height;
-    };
+// class Employees
+// {
+//     // attributes
+// private:
+//     int Age;
+//     int Height;
+//     string Name;
+//     string Company;
 
-    void setName(string name)
-    {
-        name = Name;
-    }
-    string getName()
-    {
-        return Name;
-    }
+//     // setting the setters and getters, to access the private class
+// public:
+//     void setAge(int age)
+//     {
+//         if (age >= 18)
+//             // setter
+//             age = Age;
+//     };
+//     int getAge()
+//     {
+//         // getter
+//         return Age;
+//     }
+//     void setHeight(int height)
+//     {
+//         height = Height;
+//     };
+//     int getHeight()
+//     {
+//         return Height;
+//     };
 
-    void setCompany(string company)
-    {
-        company = Company;
-    }
-    string getCompany()
-    {
-        return Company;
-    }
+//     void setName(string name)
+//     {
+//         name = Name;
+//     }
+//     string getName()
+//     {
+//         return Name;
+//     }
 
-    // methods-> that will describe the objects
-public:
-    void yourdetails()
-    {
-        std::cout << Age << '\n';
-        std::cout << Height << '\n';
-        std::cout << Name << '\n';
-        std::cout << Company << '\n';
-    };
+//     void setCompany(string company)
+//     {
+//         company = Company;
+//     }
+//     string getCompany()
+//     {
+//         return Company;
+//     }
 
-    void AskForPromotion()
-    {
+//     // methods-> that will describe the objects
+// public:
+//     void yourdetails()
+//     {
+//         std::cout << Age << '\n';
+//         std::cout << Height << '\n';
+//         std::cout << Name << '\n';
+//         std::cout << Company << '\n';
+//     };
 
-        // we will be writing the program inside this one to excute the functions
-        if (Age > 30)
+//     // void AskForPromotion()
+//     // {
 
-            std::cout << Name << " You got promoted ! \n";
+//     //     // we will be writing the program inside this one to excute the functions
+//     //     if (Age > 30)
 
-        else
+//     //         std::cout << Name << " You got promoted! \n";
 
-            std::cout << Name << " Sorry no promotion for you \n";
-    };
-    // defining the constructors
-public:
-    Employees(int age, int height, string name, string company)
-    {
-        Age = age;
-        Height = height;
-        Name = name;
-        Company = company;
-    };
-};
-int main()
-{
-    // defining the objects, employee1 is the object that is classfied under the class "Employees";
-    Employees employee1 = Employees(23, 34, "Tshewang", "Amazon");
-    // defining objects
+//     //     else
 
-    Developer sangay;
-    // employee1.age = 24;
-    // employee1.height = 24;
-    // employee1.name = "tshewang";  // employee1.age = 24;
-    // employee1.height = 24;
-    // employee1.name = "tshewang";
-    // employee1.company = "Google";
-    // employee1.company = "Google";
-    // how to refactor this code, we can do that by using the constructors
-    employee1.yourdetails();
-    employee1.setAge(15);
-    employee1.setCompany("google");
-    employee1.setHeight(23);
-    std::cout << employee1.getName() << "is " << employee1.getHeight() << "cm \n";
-    std::cout << employee1.getName() << " is " << employee1.getAge() << "years old \n";
-    std::cout << employee1.getName() << "is employee at " << employee1.getCompany() << "\n";
-    employee1.AskForPromotion();
+//     //         std::cout << Name << " Sorry no promotion for you! \n";
+//     // };
+//     // defining the constructors
+// public:
+//     Employees(int age, int height, string name, string company)
+//     {
+//         Age = age;
+//         Height = height;
+//         Name = name;
+//         Company = company;
+//     };
+// };
+// class Developer : Employees
+// {
+// public:
+//     string FavProgrammingLanguage;
 
-    return 0;
-}
+//     // defining constructors
+//     Developer(int age, int height, string name, string company, string favProgrammingLanguage)
+//         : Employees(name, company, age)
+//     {
+//         FavProgrammingLanguage = favProgrammingLanguage;
+//     };
+
+//     // this is the methods
+//     void Fixbug()
+//     {
+//         std::cout << getName() << "fixed bug using " << FavProgrammingLanguage << std::endl;
+//     }
+// };
+// int main()
+// {
+//     // defining the objects, employee1 is the object that is classfied under the class "Employees";
+//     // Employees employee1 = Employees(23, 34, "Tshewang", "Amazon");
+
+//     // defining objects
+//     Developer sangay = Developer(23, 34, "tshewang", "amazon", "c++");
+//     sangay.Fixbug();
+//     // employee1.age = 24;
+// employee1.height = 24;
+// employee1.name = "tshewang";  // employee1.age = 24;
+// employee1.height = 24;
+// employee1.name = "tshewang";
+// employee1.company = "Google";
+// employee1.company = "Google";
+// how to refactor this code, we can do that by using the constructors
+// employee1.yourdetails();
+// employee1.setAge(15);
+// employee1.setCompany("google");
+// employee1.setHeight(23);
+// std::cout << employee1.getName() << "is " << employee1.getHeight() << "cm \n";
+// std::cout << employee1.getName() << " is " << employee1.getAge() << "years old \n";
+// std::cout << employee1.getName() << "is employee at " << employee1.getCompany() << "\n";
+// employee1.AskForPromotion();
+
+//     return 0;
+// }
 
 // abstractions-> means hiding the complex things in the background where only the simple part is being shown
 // this the begining of new coding era.
@@ -1131,3 +1146,68 @@ int main()
 
 // inheritance-> inheriting the class from the parent class, will contain the same attributes and behaviour from the parent class
 // will reduce the code duplications
+
+/* INHERITANCE->*/
+// here we will be taking about the inheritance
+
+class Cars
+{
+private:
+    // defining the attributes
+    std::string Brand;
+
+protected:
+    std::string Name;
+
+    // defining the methods
+public:
+    void output()
+    {
+        std::cout << "Your care is " << Name << std::endl;
+        std::cout << Brand << " is your Car brand \n";
+    }
+
+public:
+    // defining the constructor to access your private class
+    Cars(string name, string brand)
+    {
+        Name = name;
+        Brand = brand;
+    }
+};
+
+// will be defining the inheritance here
+class ElectricCar : Cars
+
+{ // defining the attributes of the electric cars
+public:
+    string YourFavCars;
+
+    // defining the constructors
+public:
+    ElectricCar(string name, string brand, string yourfavcars)
+        : Cars(name, brand)
+    {
+        YourFavCars = yourfavcars;
+    }
+    // defining the methods for the e-car
+
+    void eCars()
+    {
+        // this e-car will have the class that will be inherited from the parent class of Cars.
+        std::cout << Name << " fixed bug using " << YourFavCars << std::endl;
+    }
+};
+
+// defining the object of class Cars
+int main()
+{
+    // Cars volvo = Cars("Volvo-20", "bwm");
+    // volvo.output();
+
+    ElectricCar volvo = ElectricCar("bmw", "ducati", "v4ductati");
+    volvo.eCars();
+}
+
+// the fourth principles of oops concepts is polymorphism-> which will group similar class and objects under one value. that is called as the polymorphism
+
