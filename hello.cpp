@@ -955,134 +955,179 @@ Below function is the main concepts
 // };
 
 // incapsulation
-// using std::string;
-// class Employees
-// {
-//     // attributes
-// private:
-//     int Age;
-//     int Height;
-//     string Name;
-//     string Company;
-
-//     // setting the setters and getters, to access the private class
-// public:
-//     void setAge(int age)
-//     {
-//         if (age >= 18)
-//             // setter
-//             age = Age;
-//     };
-//     int getAge()
-//     {
-//         // getter
-//         return Age;
-//     }
-//     void setHeight(int height)
-//     {
-//         height = Height;
-//     };
-//     int getHeight()
-//     {
-//         return Height;
-//     };
-
-//     void setName(string name)
-//     {
-//         name = Name;
-//     }
-//     string getName()
-//     {
-//         return Name;
-//     }
-
-//     void setCompany(string company)
-//     {
-//         company = Company;
-//     }
-//     string getCompany()
-//     {
-//         return Company;
-//     }
-
-//     // methods-> that will describe the objects
-// public:
-//     void yourdetails()
-//     {
-//         std::cout << Age << '\n';
-//         std::cout << Height << '\n';
-//         std::cout << Name << '\n';
-//         std::cout << Company << '\n';
-//     };
-//     // defining the constructors
-// public:
-//     Employees(int age, int height, string name, string company)
-//     {
-//         Age = age;
-//         Height = height;
-//         Name = name;
-//         Company = company;
-//     };
-// };
-// int main()
-// {
-//     // defining the objects, employee1 is the object that is classfied under the class "Employees";
-//     Employees employee1 = Employees(23, 34, "Tshewang", "Amazon");
-//     // employee1.age = 24;
-//     // employee1.height = 24;
-//     // employee1.name = "tshewang";  // employee1.age = 24;
-//     // employee1.height = 24;
-//     // employee1.name = "tshewang";
-//     // employee1.company = "Google";
-//     // employee1.company = "Google";
-//     // how to refactor this code, we can do that by using the constructors
-//     employee1.yourdetails();
-//     employee1.setAge(15);
-//     employee1.setCompany("google");
-//     employee1.setHeight(23);
-//     std::cout << employee1.getName() << "is " << employee1.getHeight() << "cm \n";
-//     std::cout
-//         << employee1.getName() << " is " << employee1.getAge() << "years old \n";
-//     std::cout << employee1.getName() << "is employee at " << employee1.getCompany();
-
-//     return 0;
-// }
-
-//  this the begining of new coding era.
-// abstractions-> means hiding the complex things in the background where only the simple part is being shown
-
-// declaring the class
 using std::string;
-class Fruits
+// setting abstract class
+class AbstractEmployee
 {
-    // defining the user-datas inside the class
-private:
-    string Color;
-    string Name;
-    int Size;
-
-    // methods( it is the functions that will describe objects)
-public:
-    void fruitsdetials()
-    {
-        std::cout << Name << "\n";
-        std::cout << Color << "\n";
-        std::cout << Size << "\n";
-    }
-    // constructors
-public:
-    Fruits(string name, string color, int size)
-    {
-        Name = name;
-        Color = color;
-        Size = size;
-    }
-    // setter and getters
+    virtual void AskForPromotion() = 0;
 };
 
+// inheriting the class employees to Developer class
+class Developer : Employees
+{
+public:
+    string FavProgrammingLanguage;
+};
+class Employees : AbstractEmployee
+{
+    // attributes
+private:
+    int Age;
+    int Height;
+    string Name;
+    string Company;
+
+    // setting the setters and getters, to access the private class
+public:
+    void setAge(int age)
+    {
+        if (age >= 18)
+            // setter
+            age = Age;
+    };
+    int getAge()
+    {
+        // getter
+        return Age;
+    }
+    void setHeight(int height)
+    {
+        height = Height;
+    };
+    int getHeight()
+    {
+        return Height;
+    };
+
+    void setName(string name)
+    {
+        name = Name;
+    }
+    string getName()
+    {
+        return Name;
+    }
+
+    void setCompany(string company)
+    {
+        company = Company;
+    }
+    string getCompany()
+    {
+        return Company;
+    }
+
+    // methods-> that will describe the objects
+public:
+    void yourdetails()
+    {
+        std::cout << Age << '\n';
+        std::cout << Height << '\n';
+        std::cout << Name << '\n';
+        std::cout << Company << '\n';
+    };
+
+    void AskForPromotion()
+    {
+
+        // we will be writing the program inside this one to excute the functions
+        if (Age > 30)
+
+            std::cout << Name << " You got promoted ! \n";
+
+        else
+
+            std::cout << Name << " Sorry no promotion for you \n";
+    };
+    // defining the constructors
+public:
+    Employees(int age, int height, string name, string company)
+    {
+        Age = age;
+        Height = height;
+        Name = name;
+        Company = company;
+    };
+};
 int main()
 {
-    // defining the objects inside the main functions
-    Fruits groundFruits = Fruits("pineapple", "green", 23);
-    groundFruits.fruitsdetials();
-};
+    // defining the objects, employee1 is the object that is classfied under the class "Employees";
+    Employees employee1 = Employees(23, 34, "Tshewang", "Amazon");
+    // defining objects
+
+    Developer sangay;
+    // employee1.age = 24;
+    // employee1.height = 24;
+    // employee1.name = "tshewang";  // employee1.age = 24;
+    // employee1.height = 24;
+    // employee1.name = "tshewang";
+    // employee1.company = "Google";
+    // employee1.company = "Google";
+    // how to refactor this code, we can do that by using the constructors
+    employee1.yourdetails();
+    employee1.setAge(15);
+    employee1.setCompany("google");
+    employee1.setHeight(23);
+    std::cout << employee1.getName() << "is " << employee1.getHeight() << "cm \n";
+    std::cout << employee1.getName() << " is " << employee1.getAge() << "years old \n";
+    std::cout << employee1.getName() << "is employee at " << employee1.getCompany() << "\n";
+    employee1.AskForPromotion();
+
+    return 0;
+}
+
+// abstractions-> means hiding the complex things in the background where only the simple part is being shown
+// this the begining of new coding era.
+// declaring the class
+// using std::string;
+
+// // creating the abstract class for maintaining the code reuseability
+// class AbstractClassFruits
+// {
+//     virtual void AskForPromotions() = 0;
+// };
+
+// class Fruits : AbstractClassFruits
+// {
+//     // defining the user-datas inside the class
+// private:
+//     string Color;
+//     string Name;
+//     int Size;
+
+//     // methods( it is the functions that will describe objects)
+// public:
+//     void fruitsdetials()
+//     {
+//         std::cout << Name << "\n";
+//         std::cout << Color << "\n";
+//         std::cout << Size << "\n";
+//     };
+//     void AskForPromotions()
+//     {
+//         // this will be the abstract class && setting the conditions for the envoking thaat functions
+//         if ()
+//         {
+//             // code to be excuted
+//         }
+//     }
+//     // constructors
+// public:
+//     Fruits(string name, string color, int size)
+//     {
+//         Name = name;
+//         Color = color;
+//         Size = size;
+//     }
+//     // setter and getters
+// };
+
+// int main()
+// {
+//     // defining the objects inside the main functions
+//     Fruits groundFruits = Fruits("pineapple", "green", 23);
+//     groundFruits.fruitsdetials();
+// };
+
+// inheritance-> inheriting the class from the parent class, will contain the same attributes and behaviour from the parent class
+// will reduce the code duplications
