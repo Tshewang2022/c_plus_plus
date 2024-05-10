@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+#include <ctime>
 // // pointer in c++
 // int main()
 // {
@@ -49,21 +51,93 @@ Pointer as the function arguments-> call reference
 
 // pointers and arrays
 
-int SumOfElements(int A[], int size)
+// int SumOfElements(int A[], int size)
+// {
+//     int i, sum = 0;
+
+//     for (i = 0; i < size; i++)
+//     {
+//         sum += A[i];
+//     }
+//     return sum;
+// };
+
+// int main()
+// {
+//     int A[] = {1, 2, 3, 4, 5};
+//     int size = sizeof(A) / sizeof(A[0]);
+//     int total = SumOfElements(A, size);
+//     printf("sum of all elements is = %d", total);
+// }
+
+// Code practice, 1 hour
+/*
+most basics in any programing languages
+1. Data types
+2. functions
+3. operators
+4. conditions
+will be mastering this four technique today
+*/
+
+// declaring variables and datatypes
+// std::string name = '8bytes';
+// int age = 4 bool sangay = true; // this will take one 1 bytes
+// char a = 'a';                   // this will take one bytes of memory
+// float height;
+// double height = 9.4; // this will take 8 bytes of memory
+
+// writing the functions in c++, i will write the simple function that will be called to main function
+// void increment()
+// {
+//     // this is the simple function in c++, where it can be called as the called stack functions, because it is being stored in the stack memory of the applications
+//     std::cout << "this is the first function, which will be stored in the stack memory of the applications \n";
+// };
+// int main()
+// {
+//     increment();
+//     std::cout << "this will be the main function \n";
+//     return 0;
+// }
+
+/*
+will test the cin and cout functions in c++, where first the global variables will be declared.
+where from the input, we will ask the user(age) input using the cin methods in c++
+*/
+// int age;
+// std::string name;
+// int main()
+// {
+//     std::cout << "*** Welcome guys, i invite you to play a simple game...*** \n";
+
+//     std::cin >> name;
+//     std::cout << "Hi, " << name << "\n";
+
+//     std::cout << "How old are you? \n";
+//     std::cin >> age;
+
+//     std::cout << "Welcome " << name << " Your are " << age << " old! ";
+// }
+
+// using the conditions such as, if, if else
+// using the looping, for loop, while loop, for while loop
+int age;
+
+int agecheck()
 {
-    int i, sum = 0;
-
-    for (i = 0; i < size; i++)
+    if (age > 18)
     {
-        sum += A[i];
+        std::cout << "Your allowed to drink \n";
     }
-    return sum;
+    else
+    {
+        std::cout << "Your are not allowed to drink \n";
+    }
+    return 0;
 };
-
 int main()
 {
-    int A[] = {1, 2, 3, 4, 5};
-    int size = sizeof(A) / sizeof(A[0]);
-    int total = SumOfElements(A, size);
-    printf("sum of all elements is = %d", total);
+    std::cin >> age;
+    std::cout << agecheck();
+    // return 0;
 }
