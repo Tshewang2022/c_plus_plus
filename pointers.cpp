@@ -121,23 +121,93 @@ where from the input, we will ask the user(age) input using the cin methods in c
 
 // using the conditions such as, if, if else
 // using the looping, for loop, while loop, for while loop
-int age;
+// int age;
 
-int agecheck()
-{
-    if (age > 18)
-    {
-        std::cout << "Your allowed to drink \n";
+// int agecheck()
+// {
+//     if (age > 18)
+//     {
+//         std::cout << "Your allowed to drink \n";
+//     }
+//     else
+//     {
+//         std::cout << "Your are not allowed to drink \n";
+//     }
+//     return 0;
+// };
+// int main()
+// {
+//     std::cin >> age;
+//     std::cout << agecheck();
+//     // return 0;
+// }
+
+// the operators in the c++ works just like any other programming languages, where it will be same
+
+// mastering loops, for loop, for each loop, while loop, for while loop
+
+// will loop through numbers where it will return from 1-10;
+
+/*
+Three types of loop in c++
+for loop
+while loop {
+    syntax for the while loop
+
+    while(conditions){
+        // the code to be excuted
     }
-    else
-    {
-        std::cout << "Your are not allowed to drink \n";
-    }
-    return 0;
-};
-int main()
-{
-    std::cin >> age;
-    std::cout << agecheck();
-    // return 0;
 }
+do while loop
+*/
+// void counting()
+// {
+
+//     for (int i = 0; i < 10; i++)
+//     {
+//         std::cout << i << std::endl;
+//     }
+// };
+// int main()
+// {
+//     counting();
+//     std::cout << "welcome to the loop, life is loop";
+//     return 0;
+// }
+
+// writing a do while loop
+
+// while loop => the basic syntax of the while loop;
+
+// int main()
+// {
+//     int i = 0;
+//     while (i < 5)
+//     {
+//         std::cout << i << "\n";
+//         i++;
+//     }
+//     return 0;
+// }
+
+// do while loop
+// int main()
+// {
+//     // write the do while loop here
+//     int i = 0; // the varibles init should be always outside loop body of the while and do while loop
+
+//     do
+//     {
+//         // conditions should be written inside the do
+//         std::cout << i << "\n";
+//         i++;
+
+//     } while (i < 5);
+//     return 0;
+// }
+
+// thats all for the basic functions, loops, and the statement inside c++
+
+/*
+** SO NOW LETS GET INTO MORE ADVANCE CONCEPTS OF CLASS AND OBJECTS INSIDE THE C++ **
+*/
