@@ -211,3 +211,43 @@ do while loop
 /*
 ** SO NOW LETS GET INTO MORE ADVANCE CONCEPTS OF CLASS AND OBJECTS INSIDE THE C++ **
 */
+/*
+The four  main pillars of oops concepts are
+1. abstraction -> hiding in the complex part
+2. inheritance -> reusing the class property of the parent class
+3. polymorphism -> grouping the class and objects that belong to the same type
+4. incapsulations -> hiding the sensitive information from the other developers, while making the class private
+*/
+
+// class -> it is the model of the data
+// object -> it is sub-set of the class, where it will have there own methods and property
+using std::string;
+
+// class Home
+// {
+//     // defining the user data
+//     string HomeType;
+//     string address;
+//     int num;
+
+//     // defining the methods to envoke that functions;
+
+// } int main()
+// {
+//     // objects will be defined here
+// }
+
+// using the function pointers in c++, 
+int Add(int a, int b)
+{
+    return a + b;
+};
+
+int main()
+{
+    int c;
+    int (*p)(int, int);
+    p = &Add;
+    c = (*p)(2, 3); // deferencing and excuting the funtion
+    printf("%d", c);
+}
