@@ -237,17 +237,17 @@ using std::string;
 //     // objects will be defined here
 // }
 
-// using the function pointers in c++, 
-int Add(int a, int b)
-{
-    return a + b;
-};
+// using the function pointers in c++,
+// int Add(int a, int b)
+// {
+//     return a + b;
+// };
 
-int main()
-{
-    int c;
-    int (*p)(int, int);
-    p = &Add;
-    c = (*p)(2, 3); // deferencing and excuting the funtion
-    printf("%d", c);
-}
+// int main()
+// {
+//     int c;
+//     int (*p)(int, int);
+//     p = &Add;
+//     c = (*p)(2, 3); // deferencing and excuting the funtion
+//     printf("%d", c);
+// }
