@@ -238,3 +238,39 @@ int main()
         temp->next = newnode;
     }
 }
+/*
+Deletion of the linked list
+1. from the beginning of the linked list
+2. from the end of the linked list
+3. from  the n^th positions
+*/
+struct Nodes
+{
+    int data;
+    struct Nodes *next;
+};
+void DelFrmBeg()
+{
+    // we need the new variables
+    struct Nodes *temp;
+    temp = head;
+    head = head->next;
+    free(temp);
+}
+// *** we are using the temp variable to temporialy store the node data inside it, so after changing the head address, we cam access it from the temp, so that we can free that temp; ***
+
+void DelFrmEnd()
+{
+    // to delete the node from the end, we need to have two pointer variables, where first temp will delete, and another variable will updated nodes to NULL;
+}
+
+// things that will make you a men
+/*
+Never say yes to something that you dont owned it
+If you are not invited, please dont go
+Control your emotions in all level
+Save money in all the case, and keep some money in cash as a men
+Find a ways to make money in any case, or you will be the money making machines for others
+Work hard and be humble-> but not weak
+Never go broke to impress someone-> that is not the right person for you at any case. the right person for you will help to build the empire not destroy it
+*/
