@@ -274,3 +274,11 @@ Find a ways to make money in any case, or you will be the money making machines 
 Work hard and be humble-> but not weak
 Never go broke to impress someone-> that is not the right person for you at any case. the right person for you will help to build the empire not destroy it
 */
+// i have learned hard way, but you should not, follow my advice, if not you are in big trouble
+
+//  How to gain confidence in this world
+// speak slowly and more concise
+// take nothing for free, if you accept in the free mode, you have to pay the price triple the amount
+// give eye contact when you speak, and dont brag
+// Be a men not a boy
+// this are the rules that  you need to follow as the men
