@@ -202,3 +202,39 @@ int main()
     }
     temp->next = newnode;
 };
+
+// inserting the data at the given positions, this seems little complex than it was
+
+struct Nodes
+{
+    int data;
+    struct Nodes *next;
+};
+
+struct Nodes *head, *newnode, *temp;
+int Pos; // will store the size of the linked list
+int main()
+{
+    int Count;
+    // first step we will create the malloc functions to dynamically assgin the memory
+    newnode = (struct Nodes *)malloc(sizeof(struct Nodes));
+    scanf("%d", &Pos);
+    if (Pos > Count)
+    {
+        prinf("Invalid positions")
+    }
+    else
+    {
+        int i;
+        temp = head;
+        while (i < Pos)
+        {
+            temp = temp->next;
+            i++;
+        };
+        printf("Enter the data");
+        scanf("%d", &newnode->data);
+        newnode->next = temp->next;
+        temp->next = newnode;
+    }
+}
