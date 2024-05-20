@@ -282,3 +282,11 @@ Never go broke to impress someone-> that is not the right person for you at any 
 // give eye contact when you speak, and dont brag
 // Be a men not a boy
 // this are the rules that  you need to follow as the men
+// how can you crack the higher level problem sloving skills
+
+// finding out the time complexity of a loop
+for (int i = 0; i < 10; i++)
+{                   // this will run n+1 of times
+    std::cout << i; // this will run n numbers of time
+}
+// so the time complexity of the for loop is O(n);
