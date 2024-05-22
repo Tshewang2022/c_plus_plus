@@ -150,7 +150,13 @@ where from the input, we will ask the user(age) input using the cin methods in c
 
 /*
 Three types of loop in c++
-for loop
+for loopint i = 0;    //  O(1);
+// while (i < 9) // this is the conditions for the while loop n(n+1);
+// {
+//     // body of the loop
+//     // this variable increment should be here ( this will run n numbers of times as long it is above conditions are true)
+//     i++;
+// }
 while loop {
     syntax for the while loop
 
@@ -161,7 +167,13 @@ while loop {
 do while loop
 */
 // void counting()
+// {int i = 0;    //  O(1);
+// while (i < 9) // this is the conditions for the while loop n(n+1);
 // {
+//     // body of the loop
+//     // this variable increment should be here ( this will run n numbers of times as long it is above conditions are true)
+//     i++;
+// }
 
 //     for (int i = 0; i < 10; i++)
 //     {
@@ -197,7 +209,7 @@ do while loop
 //     int i = 0; // the varibles init should be always outside loop body of the while and do while loop
 
 //     do
-//     {
+//     {,
 //         // conditions should be written inside the do
 //         std::cout << i << "\n";
 //         i++;
@@ -221,7 +233,7 @@ The four  main pillars of oops concepts are
 
 // class -> it is the model of the data
 // object -> it is sub-set of the class, where it will have there own methods and property
-using std::string;
+// using std::string;
 
 // class Home
 // {
@@ -251,3 +263,15 @@ using std::string;
 //     c = (*p)(2, 3); // deferencing and excuting the funtion
 //     printf("%d", c);
 // }
+
+// what is the time complexity of the while loop
+
+// the variable init should be from here
+// int i = 0;    //  O(1);
+// while (i < 9) // this is the conditions for the while loop n(n+1);
+// {
+//     // body of the loop
+//     // this variable increment should be here ( this will run n numbers of times as long it is above conditions are true)
+//     i++;
+// }
+

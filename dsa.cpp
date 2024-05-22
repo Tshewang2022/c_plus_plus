@@ -164,105 +164,105 @@ will write the program in c for the linked list
 */
 
 // 1. inserting the data at the beginning of linked list, given it has already the linked list data;
-struct node
-{
-    int data;
-    struct node *next;
-};
-struct node *head, *newnode;
+// struct node
+// {
+//     int data;
+//     struct node *next;
+// };
+// struct node *head, *newnode;
 
-// will allocate the memory using the dynamic allocation of memory using the malloc function
-newnode = (struct node *)malloc(sizeof(struct node));
-printf("Enter the data for inserting at the beginning of the linked list");
-scanf("%d", (*newnode).data);
-(*newnode).next = head;
-head = newnode;
+// // will allocate the memory using the dynamic allocation of memory using the malloc function
+// newnode = (struct node *)malloc(sizeof(struct node));
+// printf("Enter the data for inserting at the beginning of the linked list");
+// scanf("%d", (*newnode).data);
+// (*newnode).next = head;
+// head = newnode;
 
-// 2. inserting at the end of the linked list
-struct Node
-{
-    int data;
-    struct Node *next;
-};
-struct Node *head, *temp;
+// // 2. inserting at the end of the linked list
+// struct Node
+// {
+//     int data;
+//     struct Node *next;
+// };
+// struct Node *head, *temp;
 
-// writing the main function, the main syntax of the dsa;
-int main()
-{
-    newnode = (struct Node *)malloc(sizeof(struct Node));
+// // writing the main function, the main syntax of the dsa;
+// int main()
+// {
+//     newnode = (struct Node *)malloc(sizeof(struct Node));
 
-    // will allow the user to enter the data
-    printf("Enter the data for the linked list");
-    scanf("%d", (*newnode).data);
-    (*newnode).next = 0;
-    temp = head;
-    while (temp->next != 0)
-    {
-        temp = temp->next;
-    }
-    temp->next = newnode;
-};
+//     // will allow the user to enter the data
+//     printf("Enter the data for the linked list");
+//     scanf("%d", (*newnode).data);
+//     (*newnode).next = 0;
+//     temp = head;
+//     while (temp->next != 0)
+//     {
+//         temp = temp->next;
+//     }
+//     temp->next = newnode;
+// };
 
-// inserting the data at the given positions, this seems little complex than it was
+// // inserting the data at the given positions, this seems little complex than it was
 
-struct Nodes
-{
-    int data;
-    struct Nodes *next;
-};
+// struct Nodes
+// {
+//     int data;
+//     struct Nodes *next;
+// };
 
-struct Nodes *head, *newnode, *temp;
-int Pos; // will store the size of the linked list
-int main()
-{
-    int Count;
-    // first step we will create the malloc functions to dynamically assgin the memory
-    newnode = (struct Nodes *)malloc(sizeof(struct Nodes));
-    scanf("%d", &Pos);
-    if (Pos > Count)
-    {
-        prinf("Invalid positions")
-    }
-    else
-    {
-        int i;
-        temp = head;
-        while (i < Pos)
-        {
-            temp = temp->next;
-            i++;
-        };
-        printf("Enter the data");
-        scanf("%d", &newnode->data);
-        newnode->next = temp->next;
-        temp->next = newnode;
-    }
-}
+// struct Nodes *head, *newnode, *temp;
+// int Pos; // will store the size of the linked list
+// int main()
+// {
+//     int Count;
+//     // first step we will create the malloc functions to dynamically assgin the memory
+//     newnode = (struct Nodes *)malloc(sizeof(struct Nodes));
+//     scanf("%d", &Pos);
+//     if (Pos > Count)
+//     {
+//         prinf("Invalid positions")
+//     }
+//     else
+//     {
+//         int i;
+//         temp = head;
+//         while (i < Pos)
+//         {
+//             temp = temp->next;
+//             i++;
+//         };
+//         printf("Enter the data");
+//         scanf("%d", &newnode->data);
+//         newnode->next = temp->next;
+//         temp->next = newnode;
+//     }
+// }
 /*
 Deletion of the linked list
 1. from the beginning of the linked list
 2. from the end of the linked list
 3. from  the n^th positions
 */
-struct Nodes
-{
-    int data;
-    struct Nodes *next;
-};
-void DelFrmBeg()
-{
-    // we need the new variables
-    struct Nodes *temp;
-    temp = head;
-    head = head->next;
-    free(temp);
-}
+// struct Nodes
+// {
+//     int data;
+//     struct Nodes *next;
+// };
+// void DelFrmBeg()
+// {
+//     // we need the new variables
+//     struct Nodes *temp;
+//     temp = head;
+//     head = head->next;
+//     free(temp);
+// }
 // *** we are using the temp variable to temporialy store the node data inside it, so after changing the head address, we cam access it from the temp, so that we can free that temp; ***
 
-void DelFrmEnd()
-{
-    // to delete the node from the end, we need to have two pointer variables, where first temp will delete, and another variable will updated nodes to NULL;
-}
+// void DelFrmEnd()
+// {
+//     // to delete the node from the end, we need to have two pointer variables, where first temp will delete, and another variable will updated nodes to NULL;
+// }
 
 // things that will make you a men
 /*
@@ -285,8 +285,44 @@ Never go broke to impress someone-> that is not the right person for you at any 
 // how can you crack the higher level problem sloving skills
 
 // finding out the time complexity of a loop
-for (int i = 0; i < 10; i++)
-{                   // this will run n+1 of times
-    std::cout << i; // this will run n numbers of time
-}
+// for (int i = 0; i < 10; i++)
+// {                   // this will run n+1 of times
+//     std::cout << i; // this will run n numbers of time
+// }
 // so the time complexity of the for loop is O(n);
+
+// the new concepts in the c++, palinedrom
+/*
+we will need the function that will check if the given function is palinedrome or not
+we need loop that will iterate over the given string
+so we have to use the bool functions
+we need to length property that will over each and every string, that will compare the string from start and from the last;
+*/
+bool is_palinedrome(string num2)
+{
+    // this will loop over the string of num2 to check if it is palinedrome or not;
+    for (int i = 0; i < length.num2 / 2; i++;)
+    {
+        // we will have to check for the condition for the palinedrome string;
+        if (num2[i] != num2[length.num2 - i - 1])
+        {
+            return false;
+        }
+        return true;
+    }
+};
+int main()
+{
+    // will check if the given string is palinedrome or not;
+    std::string num2 = "121";
+    if (is_palinedrome(num2))
+    {
+        std::cout << num2 < "is palinedrome \n";
+    }
+    else
+    {
+        std::cout << num2 << "is not palinedrome \n";
+    }
+}
+
+// how to calculate the time complexity of any functions
