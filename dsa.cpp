@@ -1,5 +1,4 @@
 #include <iostream>
-
 /*
 list-> dealing with the arrays
 linked list-> dealing with dynamic arrays(will contains the data and its address)
@@ -171,14 +170,14 @@ will write the program in c for the linked list
 // };
 // struct node *head, *newnode;
 
-// // will allocate the memory using the dynamic allocation of memory using the malloc function
+// will allocate the memory using the dynamic allocation of memory using the malloc function
 // newnode = (struct node *)malloc(sizeof(struct node));
 // printf("Enter the data for inserting at the beginning of the linked list");
 // scanf("%d", (*newnode).data);
 // (*newnode).next = head;
 // head = newnode;
 
-// // 2. inserting at the end of the linked list
+// 2. inserting at the end of the linked list
 // struct Node
 // {
 //     int data;
@@ -298,31 +297,189 @@ we need loop that will iterate over the given string
 so we have to use the bool functions
 we need to length property that will over each and every string, that will compare the string from start and from the last;
 */
-bool is_palinedrome(string num2)
+// bool is_palinedrome(string num2)
+// {
+//     // this will loop over the string of num2 to check if it is palinedrome or not;
+//     for (int i = 0; i < length.num2 / 2; i++;)
+//     {
+//         // we will have to check for the condition for the palinedrome string;
+//         if (num2[i] != num2[length.num2 - i - 1])
+//         {
+//             return false;
+//         }
+//         return true;
+//     }
+// };
+// int main()
+// {
+//     // will check if the given string is palinedrome or not;
+//     std::string num2 = "121";
+//     if (is_palinedrome(num2))
+//     {
+//         std::cout << num2 < "is palinedrome \n";
+//     }
+//     else
+//     {
+//         std::cout << num2 << "is not palinedrome \n";
+//     }
+// }
+
+// till now what i have studied
+/*
+1.memory allocation-> global/stack/heap
+2.pointers ->
+3.linked list-> where inserting the data, deleting and reversing the linked list
+3.1 inserting the node at the begining, nth position and end
+3.2 deleting the node and freeing up the memory
+3.3. reversing the linked list, using iteration and recursion method
+*/
+
+// reversing the linked list using the recursive methods in c++
+// struct Node
+// {
+//     int data;
+//     struct Node *next;
+// };
+// struct Node *head, *temp;
+// // print function that will print out the output
+// void print(Node *p)
+// {
+//     // if the given address is null, then it will return the input
+//     if (p == NULL)
+//     {
+//         printf('\n');
+//         return;
+//     };
+
+//     Print(p->next); // this is the recursive call
+//     printf("%d", p->data);
+// };
+
+// void Insert(Node *head, int data)
+// {
+//     // this function will allocated the memory for the data
+//     /*
+//     steps for allocating the data dynamically
+//     1. first calculate the size of data that we are going to stored inside the heap*/
+//     Node *temp = (struct Node *)malloc(sizeof(struct Node));
+
+//     // defining the data
+//     temp->data = data;
+//     temp->next = NULL;
+
+//     if (head == NULL)
+//     {
+//         head = temp;
+//     }
+//     else
+//     {
+//         Node *temp1 = head;
+//         while (temp1->next != NULL)
+//         {
+//             temp1 = temp1->next;
+//         };
+//         temp1->next = temp;
+//     }
+//     return head;
+// };
+
+// int main()
 {
-    // this will loop over the string of num2 to check if it is palinedrome or not;
-    for (int i = 0; i < length.num2 / 2; i++;)
-    {
-        // we will have to check for the condition for the palinedrome string;
-        if (num2[i] != num2[length.num2 - i - 1])
-        {
-            return false;
-        }
-        return true;
-    }
-};
-int main()
-{
-    // will check if the given string is palinedrome or not;
-    std::string num2 = "121";
-    if (is_palinedrome(num2))
-    {
-        std::cout << num2 < "is palinedrome \n";
-    }
-    else
-    {
-        std::cout << num2 << "is not palinedrome \n";
-    }
+    struct Node *head = NULL;
+    head = Insert(head, 2);
+    head = Insert(head, 3);
+    head = Insert(head, 4);
+    head = Insert(head, 5);
+    Print(head);
 }
 
-// how to calculate the time complexity of any functions
+/*
+main structure of the das is composed of
+1. print function
+2. insert function
+3. main function
+// just like the normal functions
+*/
+// list in programming is the array;
+
+// doubly linked list, which means that it will have double link to the list or data;
+/*
+linked lists are of two kinds
+1.single linked list called, singly linked list;
+2.double linked list called, doubly linked list;-> we can do the forward and the reversed look up;
+that means that, it will have one extra pointers, where it points to the previous node;
+*/
+
+// visual representation of the doubly linked list
+// struct dsa
+// {
+//     // numbers of fields in the node(3);
+//     int data;
+//     struct dsa *next; // this will store the addess of the next node;
+//     struct dsa *prev; // this will store the address of the previous node;
+// };
+
+// implementation of the doubly linked list
+/*
+insertion(begining, end and nth position)
+traversal
+deletion(begining, end and nth position)
+*/
+struct node
+{
+    int data;
+    struct node *next;
+    struct node *prev;
+};
+struct node *head;
+// Getting a newNode
+struct node *newNode(int x)
+{
+    // will create the variable in the form of heap memory, so need to call the malloc.
+    struct node *newNode = (struct node *)malloc(sizeof(struct node));
+    newNode->data = x;
+    newNode->next = NULL;
+    newNode->prev = NULL;
+    return newNode;
+}
+void InsertAtHead(int x)
+{
+    struct Node *temp = newNode(x);
+    if (head == NULL)
+    {
+        head = newNode;
+        return;
+    }
+    head->prev = newNode;
+    newNode->next = head;
+    head = newNode;
+};
+
+int main()
+{
+    InsertAtHead();
+};
+
+// introduction to stack-> way of arranging the datas. Also called as the "last in -first out"-> which means, the data have to removed in sequence manner from the first;
+/*
+stack Abstract Data Types(ADT); Where we only talk about the logical and features part, not the implementation;
+
+stack-> in terms of data, we can define as A list with the restriction that insertion and deletion can be performed only from the one end, called top is called stack
+*/
+
+/*
+operations in stack that we can perform -> all can be perform in O(1);
+1. push(x)-> to insert into the top
+2. pop()-> removing from the top
+3. top()-> will return top element of the stack
+4. IsEmpty()->to check whether the stack is empty or not;
+*/
+
+// Application of stack in real life scenarios;
+/*
+1.function call / recursion;
+2.undo in editor;
+3. balanced parenthesis;
+*/
+
+// got my first knowlegde on the video editing, having been focusing on it whole day
