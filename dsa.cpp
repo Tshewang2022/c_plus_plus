@@ -482,4 +482,24 @@ operations in stack that we can perform -> all can be perform in O(1);
 3. balanced parenthesis;
 */
 
-// got my first knowlegde on the video editing, having been focusing on it whole day
+// got my first knowlegde on the video editing, having been focusing on it whole dayclass man
+{
+public:
+    // defining the attributes, or the model of the class
+    int age;
+    std::string name;
+
+    // defining the methods of the class
+public:
+    void output(int age, string name)
+    {
+        std::cout << 'he is' << age;
+        std::cout << name << 'is from tashigang';
+    }
+};
+int main()
+{
+    man apple;
+    apple.output(12, 'tshewang');
+    return 0;
+}

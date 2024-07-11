@@ -600,7 +600,25 @@ Searching elements inside the arrays
 /*
 How to sort the array
 Types of sorting in c++
-1. Bubble sort = if(index[0] > index[1]){
+1. Bubble sort = if(index[0] > index[1])class man
+{
+    // defining the attributes, or the model of the class
+    int age;
+    std::string name;
+
+    // defining the methods of the class
+
+public:
+    void output()
+    {
+        std::cout << 'he is' << age;
+        // std::cout << name << 'is from tashigang';
+    }
+} int main()
+{
+    man apple;
+    apple.output();
+}{
     std::cout << "index[0] of the array will move to index[1], by swaping the position";
 }else{
     std::cout << "The position of the array will remain same, untill all the arrays are in orders";
@@ -706,7 +724,26 @@ standard libary has 4 input and output objects(IO)
 oop concepts in c++
 object, class, methods and constructors(does not have return types, have same name like class, public)
 */
-// using std::string;
+// using std::string;class man
+// {
+//     // defining the attributes, or the model of the class
+//     int age;
+//     std::string name;
+
+//     // defining the methods of the class
+
+// public:
+//     void output()
+//     {
+//         std::cout << 'he is' << age;
+//         // std::cout << name << 'is from tashigang';
+//     }
+// }
+// int main()
+// {
+//     man apple;
+//     apple.output();
+// }
 
 // this will act as the model for the employee, and by defualt the class are in private, so you cannot access from the object
 // class Employee
@@ -726,6 +763,7 @@ object, class, methods and constructors(does not have return types, have same na
 //     string Name;
 //     string Company;
 //     int Age;
+
 //     void IntroduceYourself()
 //     {
 //         std::cout << "Name is " << Name << '\n';
@@ -740,7 +778,82 @@ object, class, methods and constructors(does not have return types, have same na
 //         Age = age;
 //     }
 // };
+// class man
+// {
+//     class man
+//     {
+//         // defining the attributes, or the model of the class
+//         int age;
+//         std::string name;
 
+//         // defining the methods of the class
+//         class man
+//         {
+//             // defining the attributes, or the model of the class
+//             int age;
+//             class man
+//             {
+//                 // defining the attributes, or the model of the class
+//                 int age;
+//                 std::string name;
+
+//                 // defining the methods of the class
+
+//             public:
+//                 void output()
+//                 {
+//                     std::cout << 'he is' << age;
+//                     // std::cout << name << 'is from tashigang';
+//                 }
+//             } int main()
+//             {
+//                 man apple;
+//                 apple.output();
+//             }
+//             std::string name;
+
+//             // defining the methods of the class
+
+//         public:
+//             void output()
+//             {
+//                 std::cout << 'he is' << age;
+//                 // std::cout << name << 'is from tashigang';
+//             }
+//         } int main()
+//         {
+//             man apple;
+//             apple.output();
+//         }
+
+//     public:
+//         void output()
+//         {
+//             std::cout << 'he is' << age;
+//             // std::cout << name << 'is from tashigang';
+//         }
+//     } int main()
+//     {
+//         man apple;
+//         apple.output();
+//     }
+//     // defining the attributes, or the model of the class
+//     int age;
+//     std::string name;
+
+//     // defining the methods of the class
+
+// public:
+//     void output()
+//     {
+//         std::cout << 'he is' << age;
+//         // std::cout << name << 'is from tashigang';
+//     }
+// } int main()
+// {
+//     man apple;
+//     apple.output();
+// }
 // // creating the object of the class employee
 // int main()
 // {
@@ -881,7 +994,7 @@ Below function is the main concepts
 /*
 1. abstractions-> this will make another developer easy to work with our code, because, complex part will be hidden
 2. inheritance -> will reduce the code duplications where, the new class will inheritate properties fromm the parent class
-3. polymorphism -> will group the variables and function of the simlar kind to one group so that we can bundle them to reduce the code
+3. polymorphism -> wil will reduce the code duplicationsl group the variables and function of the simlar kind to one group so that we can bundle them to reduce the code
 4. incapsulations->some parts of the data will be hidden, will the third party  cannot modify it. maybe for the security reason
 */
 
@@ -955,7 +1068,7 @@ Below function is the main concepts
 // };
 
 // incapsulation
-using std::string;
+// using std::string;
 // setting abstract class
 // class AbstractEmployee
 // {
@@ -1150,64 +1263,94 @@ using std::string;
 /* INHERITANCE->*/
 // here we will be taking about the inheritance
 
-class Cars
-{
-private:
-    // defining the attributes
-    std::string Brand;
+// class Cars
+// {
+// private:
+//     // defining the attributes
+//     std::string Brand;
 
-protected:
-    std::string Name;
+// protected:
+//     std::string Name;
 
-    // defining the methods
-public:
-    void output()
-    {
-        std::cout << "Your care is " << Name << std::endl;
-        std::cout << Brand << " is your Car brand \n";
-    }
+//     // defining the methods
+// public:
+//     void output()
+//     {
+//         std::cout << "Your care is " << Name << std::endl;
+//         std::cout << Brand << " is your Car brand \n";
+//     }
 
-public:
-    // defining the constructor to access your private class
-    Cars(string name, string brand)
-    {
-        Name = name;
-        Brand = brand;
-    }
-};
+// public:
+//     // defining the constructor to access your private class
+//     Cars(string name, string brand)
+//     {
+//         Name = name;
+//         Brand = brand;
+//     }
+// };
 
 // will be defining the inheritance here
-class ElectricCar : Cars
+// class ElectricCar : Cars
 
-{ // defining the attributes of the electric cars
-public:
-    string YourFavCars;
+// { // defining the attributes of the electric cars
+// public:
+//     string YourFavCars;
 
-    // defining the constructors
-public:
-    ElectricCar(string name, string brand, string yourfavcars)
-        : Cars(name, brand)
-    {
-        YourFavCars = yourfavcars;
-    }
-    // defining the methods for the e-car
+//     // defining the constructors
+// public:
+//     ElectricCar(string name, string brand, string yourfavcars)
+//         : Cars(name, brand)
+//     {
+//         YourFavCars = yourfavcars;
+//     }
+//     // defining the methods for the e-car
 
-    void eCars()
-    {
-        // this e-car will have the class that will be inherited from the parent class of Cars.
-        std::cout << Name << " fixed bug using " << YourFavCars << std::endl;
-    }
-};
+//     void eCars()
+//     {
+//         // this e-car will have the class that will be inherited from the parent class of Cars.
+//         std::cout << Name << " fixed bug using " << YourFavCars << std::endl;
+//     }
+// };
 
 // defining the object of class Cars
-int main()
-{
-    // Cars volvo = Cars("Volvo-20", "bwm");
-    // volvo.output();
+// int main()
+// {
+//     // Cars volvo = Cars("Volvo-20", "bwm");
+//     // volvo.output();
 
-    ElectricCar volvo = ElectricCar("bmw", "ducati", "v4ductati");
-    volvo.eCars();
-}
+//     ElectricCar volvo = ElectricCar("bmw", "ducati", "v4ductati");
+//     volvo.eCars();
+// }
 
 // the fourth principles of oops concepts is polymorphism-> which will group similar class and objects under one value. that is called as the polymorphism
 
+/*
+class
+object
+methods
+constructor -> for now lets keep as the default
+*/
+#include <iostream>
+#include <vector>
+#include <ctime>
+class man
+{
+public:
+    // defining the attributes, or the model of the class
+    int age;
+    std::string name;
+
+    // defining the methods of the class
+public:
+    void output(int age, string name)
+    {
+        std::cout << 'he is' << age;
+        std::cout << name << 'is from tashigang';
+    }
+};
+int main()
+{
+    man apple;
+    apple.output(12, 'tshewang');
+    return 0;
+}
