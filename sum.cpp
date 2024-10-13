@@ -63,6 +63,7 @@ int removeDuplicates(std::vector<int> &nums)
 
     return k; // Return the number of unique elements
 }
+// crushing the most fundamental of programming and mastering into the top notch is my goal. afterall i enjoy programming more than anyone in this world
 
 int main()
 {
