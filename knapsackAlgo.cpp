@@ -29,7 +29,6 @@ int main()
             }
         }
     }
-
     // Output the maximum value
     std::cout << "The maximum value that can be obtained is: " << K[n][m] << std::endl;
 
