@@ -4,7 +4,7 @@
 class abstractEmployee
 {
     virtual void askPromotion() = 0;
-};
+};  
 class Employee : abstractEmployee
 {
     // if we encapsulate the properties of this class using the private modifier, then we should set getters and setters function
