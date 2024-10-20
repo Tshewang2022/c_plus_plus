@@ -37,29 +37,27 @@ int partition(int low, int high, int A[])
 
     Swap(A[low], A[j]);
     return j;
+};
 
-    void quickSort(int n, int A[], int low, int high)
+void quickSort(int n, int A[], int low, int high)
+{
+    if (low < high)
     {
-        if (low < high)
-        {
-            int j = partition(low, high, A);
-            quickSort(n, A, low, j - 1);
-            quickSort(n, A, j + 1, high);
-        }
+        int j = partition(low, high, A);
+        quickSort(n, A, low, j - 1);
+        quickSort(n, A, j + 1, high);
     }
-
-    int main()
+};
+int main()
+{
+    int A[] = {2, 1, 3, 5, 6};
+    int n = sizeof(A) / sizeof(A[0]);
+    quickSort(n, A, 0, n - 1);
+    for (int i = 0; i < n; i++)
     {
-        int A[] = {2, 1, 3, 5, 6};
-        int n = sizeof(A) / sizeof(A[0]);
-        quickSort(n, A, 0, n - 1);
-
-        for (int i = 0; i < n; i++)
-        {
-            std::cout << A[i] << " ";
-        }
-        std::cout << std::endl;
-
-        return 0;
+        std::cout << A[i] << " ";
     }
+    std::cout << std::endl;
+
+    return 0;
 }
