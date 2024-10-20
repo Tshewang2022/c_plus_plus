@@ -14,4 +14,5 @@ int main()
     x = temp;
     cout << "the value has been swaped successfully " << x << endl;
     cout << "the value has been swaped successfully " << y << endl;
+    return 0;
 }
