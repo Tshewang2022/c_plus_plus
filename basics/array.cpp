@@ -65,30 +65,30 @@ int main()
     // pass by value, pass by pointers (int* prt) and pass by reference(&prt);
     // smart pointer
     // how do use queue in the cpp
-    std::queue<int> p;
+    // std::queue<int> p;
 
-    // add element
-    p.push(1);
-    p.push(2);
-    p.push(3);
+    // // add element
+    // p.push(1);
+    // p.push(2);
+    // p.push(3);
 
-    while (!p.empty())
-    {
-        std::cout << p.front() << std::endl;
-        p.pop();
-    }
+    // while (!p.empty())
+    // {
+    //     std::cout << p.front() << std::endl;
+    //     p.pop();
+    // }
 
-    std::stack<int> s;
-    s.push(1);
-    s.push(2);
-    s.push(3);
-    s.push(4);
+    // std::stack<int> s;
+    // s.push(1);
+    // s.push(2);
+    // s.push(3);
+    // s.push(4);
 
-    while (!s.empty())
-    {
-        std::cout << s.top() << std::endl;
-        s.pop();
-    }
+    // while (!s.empty())
+    // {
+    //     std::cout << s.top() << std::endl;
+    //     s.pop();
+    // }
 
-    return 0;
+    // return 0;
 }
