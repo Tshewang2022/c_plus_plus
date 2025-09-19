@@ -37,3 +37,20 @@ const numberMethods=(number)=>{
 }
 
 numberMethods(number);
+
+
+// array methods=> this needs more attension;
+const array=[1,2,3,4,4,5,5,6,7];
+const array2 =["1", "banana", "pineapple", "chord"];
+
+// methods of the arrays=> training for 1 hour
+
+// most common, push(value),pop(), sort(), concat, filter(), map();
+
+const pushIntoArr=(array)=>{
+    const pushedvalue= array.push(8);
+    console.log(pushedvalue);
+}
+
+pushIntoArr(array);
+console.log(array);
