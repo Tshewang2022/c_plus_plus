@@ -54,3 +54,34 @@ const pushIntoArr=(array)=>{
 
 pushIntoArr(array);
 console.log(array);
+
+
+// filter => return the new subset of array where it each element should pass the test case
+
+const filiterElem =(array)=>{
+    const evennum = array.filter(num=> num%2===0);
+    console.log(evennum);// this will return the number that is only divisible by 2
+}
+
+filiterElem(array);
+
+// map => will return the array of the same length and element will be changed
+
+const mapEle =(array)=>{
+    const changedEle =array.map(num=> num*2);
+    console.log(changedEle); // will return the array of the same length but multiplied by 2;
+}
+
+mapEle(array);
+
+console.log(array.reverse()); // i hope this will reverse the array
+
+
+// reduce methods => use to combine or accumulate the array into the single element is called the reduce methods
+
+const reduceArray =(array)=>{
+   const sum = array.reduce((acc, curr) => acc + curr, 0); // 0 = inintal value
+   // acc = total for far
+   // curr = current value that we are going to loop through
+   console.log(sum);//
+}
