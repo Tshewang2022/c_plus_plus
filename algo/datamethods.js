@@ -85,3 +85,40 @@ const reduceArray =(array)=>{
    // curr = current value that we are going to loop through
    console.log(sum);//
 }
+
+reduceArray(array);
+
+// some => this method will check if the any of the element pass the given test case
+
+// so even one element pass the test case, it will return true
+
+const someElement =(array)=>{
+    const testEle =array.some(num=> num%2 ===0);
+    console.log(testEle); // this will return the true, because if contains the even num in the array
+}
+
+someElement(array);
+
+// every => each and every test case should get passed, if not it will through false
+const everyEle =(array)=>{
+    const everyEle = array.every(num=>num%2===0);
+    console.log(everyEle); // this will return false, because every ele should pass the test case
+}
+everyEle(array);
+
+
+// slice => will create the copy of the array, and extract that matches the arg
+const sliceEele =( array)=>{
+    const sliceEle =array.slice(1,3);
+    console.log(sliceEle); // will return only the ele from 1 to 3;
+}
+sliceEele(array);
+
+
+// splice => remove or add the element in the array, and it also modifies the element
+const spliceEle =(array)=>{
+    const remove = array.splice(1,3);
+    console.log(remove); // will return only the remove element, that is starting from index one, to till 3;
+    console.log(array) // modified the array, because it does not copy;
+}
+
