@@ -88,6 +88,6 @@ const list = new Linkedlist();
 list.append(10);
 list.append(20);
 list.prepend(5);
-list.print(); // 5 -> 10 -> 20 -> null
+list.print(); 
 list.remove(10);
-list.print(); // 5 -> 20 -> null
+list.print(); 
