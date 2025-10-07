@@ -20,28 +20,30 @@
 // linearSearch(array, 1);
 
 // binary search=> it works it the divide and conqure algo, on the sorted array
-const array2 = [1,2,3,4,5,6,7,8,9,10];
-// it will be divided into the right, left and middle section
+// const array2 = [1,2,3,4,5,6,7,8,9,10];
+// // it will be divided into the right, left and middle section
 
-const binarySearch = (array2, y) => {
-  let low = 0;
-  let high = array2.length - 1;
+// const binarySearch = (array2, y) => {
+//   let low = 0;
+//   let high = array2.length - 1;
 
-  while (low <= high) {
-    let mid = Math.floor(low + (high - low) / 2);
+//   while (low <= high) {
+//     let mid = Math.floor(low + (high - low) / 2);
 
-    if (array2[mid] === y) {
-      return mid; // found!
-    } else if (array2[mid] > y) {
-      high = mid - 1; // search left
-    } else {
-      low = mid + 1; // search right
-    }
-  }
+//     if (array2[mid] === y) {
+//        return { index: mid, value: array2[mid] };
+//     } else if (array2[mid] > y) {
+//       high = mid - 1; 
+//     } else {
+//       low = mid + 1;
+//     }
+//   }
 
-  return -1; // not found
-};
+//   return -1; 
+// };
 
-console.log(binarySearch(array2, 9)); // ✅ Output: 8
+// console.log(binarySearch(array2, 5)); // ✅ Output: 8
 
-binarySearch(array2, 9);
+// binarySearch(array2, 9);
+
+// console.log(Math.min(3, 1));
