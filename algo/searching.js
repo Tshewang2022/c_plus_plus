@@ -47,3 +47,9 @@
 // binarySearch(array2, 9);
 
 // console.log(Math.min(3, 1));
+
+let arr =[1,2,3,10,5,6,7,8];
+let x =3;
+
+let n = arr.length;
+console.log(arr[Math.min(3, n)]-1)
