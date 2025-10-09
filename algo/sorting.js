@@ -83,3 +83,31 @@ const insertionSort =(array4)=>{
 }
 
 console.log(insertionSort(array4));
+// this is how to insertion sorting mechanism works
+
+// selection sorting algorithm
+// the working mechanism of the selection sorting algo
+let  array5 = [9,2,7,3,5,0,90];
+// this is how does the selection sorting works, it selects the smallest from the array
+// swap with the first element of index [0];
+let selectionSort =(array5)=>{
+    for(let i =0;i<array5.length-1; i++){
+        let smallest = i;
+
+        // now compare each and every element to the array[0]
+        for(let j =i+1; j<array5.length; j++){
+            if(array5[j]<array5[smallest]){
+                smallest =j;
+            }
+        }
+        if(smallest !==i){
+            [array5[i], array5[smallest]]=[array5[smallest], array5[i]];
+        }
+    }
+    return array5;
+
+}
+
+// merge sort 
+
+// heap sort
