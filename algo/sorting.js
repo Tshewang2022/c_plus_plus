@@ -64,50 +64,85 @@
 
 // this is how the quick sort algo works
 // working machanism of the insertion sort;
-let array4=[2,6,1,8,9,0,5];
-const insertionSort =(array4)=>{
-    for(let i =1; i<array4.length; i++){
-        let temp = array4[i]; // 6
-        let j;
-        // the bug is in this code
-        for(j = i-1; j >= 0 && array4[j] > temp;  j--){
-            // compare the element and shift the element
-                // shift happens
-                array4[j+1]=array4[j] 
+// let array4=[2,6,1,8,9,0,5];
+// const insertionSort =(array4)=>{
+//     for(let i =1; i<array4.length; i++){
+//         let temp = array4[i]; // 6
+//         let j;
+//         // the bug is in this code
+//         for(j = i-1; j >= 0 && array4[j] > temp;  j--){
+//             // compare the element and shift the element
+//                 // shift happens
+//                 array4[j+1]=array4[j] 
              
-            }
-            array4[j + 1] = temp;
-    }
-    return array4;
+//             }
+//             array4[j + 1] = temp;
+//     }
+//     return array4;
 
-}
+// }
 
-console.log(insertionSort(array4));
+// console.log(insertionSort(array4));
 // this is how to insertion sorting mechanism works
 
 // selection sorting algorithm
 // the working mechanism of the selection sorting algo
-let  array5 = [9,2,7,3,5,0,90];
+// let  array5 = [9,2,7,3,5,0,90];
 // this is how does the selection sorting works, it selects the smallest from the array
 // swap with the first element of index [0];
-let selectionSort =(array5)=>{
-    for(let i =0;i<array5.length-1; i++){
-        let smallest = i;
+// let selectionSort =(array5)=>{
+//     for(let i =0;i<array5.length-1; i++){
+//         let smallest = i;
 
-        // now compare each and every element to the array[0]
-        for(let j =i+1; j<array5.length; j++){
-            if(array5[j]<array5[smallest]){
-                smallest =j;
-            }
-        }
-        if(smallest !==i){
-            [array5[i], array5[smallest]]=[array5[smallest], array5[i]];
-        }
-    }
-    return array5;
+//         // now compare each and every element to the array[0]
+//         for(let j =i+1; j<array5.length; j++){
+//             if(array5[j]<array5[smallest]){
+//                 smallest =j;
+//             }
+//         }
+//         if(smallest !==i){
+//             [array5[i], array5[smallest]]=[array5[smallest], array5[i]];
+//         }
+//     }
+//     return array5;
 
-}
+// }
 
 // merge sort 
+// it works on the concepts of divide and conquer algo
+// it will be divided in the low , mid and high, and will be sorted recursively
+// i still dont know how to use the javascript build in features
+let array6 =[9,8,10,7,4,0,2];
+const mergeSort=(array6)=>{
+    // the base case for the recursion
+    if(array6.length<=1)return array6;
+    
+    let mid = Math.floor(array6.length/2);
+    let left = array6.slice(0, mid);
+    let right = array6.slice(mid);
+
+    return merge(mergeSort(left), mergeSort(right));
+}
+
+// function merge
+const merge=(left, right)=>{
+    const result = [];
+    let i =0;
+    let j =0;
+    while(i<left.length && j < right.length){
+    if (left[i] < right[j]) {
+      result.push(left[i]);
+      i++;
+    } else {
+      result.push(right[j]);
+      j++;
+    }
+    }
+    return result.concat(left.slice(i)).concat(right.slice(j));
+}
+
+console.log(mergeSort(array6));
+
 
 // heap sort
+// it is been usually build from the max heap, where the last element has removed and replaced.
