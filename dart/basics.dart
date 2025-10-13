@@ -122,3 +122,15 @@ main(){
    Set names ={...num};
    print(names);
 }
+// revisit the concepts of the dart programming language
+// data types in the dart programming language
+// INT, DOUBLE, BOOL, STRING, DYNAMIC // this are the primitive data types
+// dart is the static and compiled time language
+// the methods of declaring the variables, using explicite type
+// using the var keyword
+// using the dynamic keyword
+// using the final keyword
+// this is the complete revisiting of the concepts 
+
+
+// control structure works same as the javascript, and all most all the methods works same as the javascript
