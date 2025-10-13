@@ -100,9 +100,62 @@ class Car extends Descriptions{
     }
 }
 
-main(){
-  var car = Car();
-  car.describe();
+// main(){
+//   var car = Car();
+//   car.describe();
+// }
+
+// so in dart we can make the private property using the _ at the beginning of the variables;
+// inheritance in dart means=> ability to inherit property or the methods from the parent class;
+
+
+// trying to implement the encapsulations in the dart
+
+class Person{
+  // using the getter and setter functions;
+  String _name=""; // this is private fields;
+
+  String get name => _name;
+
+  set name(String value){
+    _name = value;
+  }
+
 }
 
-// inheritance in dart means=> ability to inherit property or the methods from the parent class;
+// this is the concept of the encapsulations;
+// main(){
+//   var p = Person();
+//   p.name="tSHEWANG";
+//   print(p.name);
+// }
+
+// the concepts of polymorphism;
+// it allows the objects to take mulitple form;
+// Base class
+abstract class Animal {
+  void speak(); // abstract method
+}
+
+// Derived classes
+class Dog extends Animal {
+  @override
+  void speak() {
+    print("Bark!");
+  }
+}
+
+class Cat extends Animal {
+  @override
+  void speak() {
+    print("Meow!");
+  }
+}
+
+void main() {
+  List<Animal> animals = [Dog(), Cat()];
+
+  for (var animal in animals) {
+    animal.speak(); // behaves differently depending on the object
+  }
+}
