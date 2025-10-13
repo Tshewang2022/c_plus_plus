@@ -118,5 +118,48 @@ const myBike = new Bike('ducati', 20);
 // myBike.model();
 myBike.inof();
 
+// in javascript we can make the property of the class private using the #
 //encapsulation hides the internal state of the objects, that means it hides the methods and the variable properties of the class
 // encapsulation, getters and setters, where the variable and methods are made private instead of the public
+
+// so encapsulation is implemented using the getter and setter functions
+
+
+
+class Person {
+   
+    #age;
+    constructor(name, age){
+        this.name = name;
+        this.#age = age
+    }
+
+    get age(){
+        return this.#age;
+    }
+    // encasulations
+    set age(age){
+        if(age<10){
+            console.log(`You are underage`)
+        }
+        this.#age= age;
+    }
+
+    describe(){
+        console.log(`My name is ${this.name} and  i am ${this.age} old`)
+    }
+}
+
+const  tshewang = new Person("Tshewang", 34);
+tshewang.age = 40;
+tshewang.describe();// the concept is called the encapsulations
+
+
+// what is polymorphism => it allows the objects of different classes to be trated through the same interface but behave differently;
+// polymorphism in actions
+const vehicles =[
+    new Car('bmw'),
+    new Bike('harley'),
+];
+
+vehicles.forEach(vehicle=> vehicle.inof())
