@@ -32,6 +32,12 @@ import "fmt"
 // in simple, there is no type coercion ;
 // this will lead the memory overflow, if miscaculated;
 // main function => entry point
+import "reflect"
 func main() {
-	fmt.Println("Hello, World!")
+	name:="tshewang gyaltshen";
+
+	if(reflect.TypeOf(name).String() == "string"){
+		fmt.Println("yo man , that is string");
+	}
+	fmt.Println("Hello, World!", name)
 }	
