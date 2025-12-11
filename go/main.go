@@ -30,12 +30,41 @@ import "fmt"
 
 // ALERT*** although, numbers belongs to the int, it itself have the different type, so it cannot be added, if of different type;
 // in simple, there is no type coercion ;
-// this will lead the memory overflow, if miscaculated;
+// this will lead the memory overflow, if miscalculated;
 // main function => entry point
 import "reflect"
 func main() {
 	name:="tshewang gyaltshen";
+	
+	// const => it must be know at the compile time
 
+
+	// go is more like kind of direct in terms of the type conversion
+	// if you were to convert from
+
+	// the most common datatypes in go
+	// array, map, slice(dynamic arrays) 
+	age:=19.9;
+	var ages int = int(age);
+	fmt.Println(ages); 
+
+	// declaring the arrays in go
+	numbers:= [4]int{1,2,3,4}
+
+	// print the numbers that is present inside the array
+	for i:=0; i<len(numbers); i++{
+		fmt.Println(numbers[i]);
+	}
+
+	// methods of array in go;
+	// len(), checks length;
+	// copy(), copy the arrays;
+	// cap()=> checks the size of the array;
+
+	fmt.Println(numbers)
+
+
+	// it is a beautiful language;
 	if(reflect.TypeOf(name).String() == "string"){
 		fmt.Println("yo man , that is string");
 	}
