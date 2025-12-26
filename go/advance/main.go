@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// have to learn more about the how the short hand of : works;
 // create a type of stack & queue
 type stack struct {
 	items []string
@@ -48,12 +49,76 @@ func (q *queue) dequeue() (int, bool) {
 	q.items = q.items[:1]
 	return front, true
 }
+
+// implementation of the linked list in go;
+type Node struct {
+	val  int
+	next *Node
+}
+
+// this is the node creation;
+type linkedList struct {
+	head *Node
+}
+
+// we seems to write a code, but we dont seems to understand it fully the code,
+// what it does and how its does, and why it does
+// untill and unless you know that, you can never discover the full potential of the
+// programming
+func (n *linkedList) appendNode(val int) {
+	// check if the node is empty or no
+	newNode := &Node{val: val}
+	if n.head == nil {
+		n.head = newNode
+		return
+	}
+
+	// if the given node is not empty;
+	current := n.head
+	// now loop over it
+	for current.next != nil {
+		current = current.next
+	}
+	current.next = newNode
+}
+
+// deleting the node at the given positions;
+func (n *linkedList) deleteNode(val int) {
+	// check if the head not is empty or not, if empty, return nothing;
+	if n.head == nil {
+		return
+	}
+
+	if n.head.val == val {
+		n.head = n.head.next
+		return
+	}
+	// if the head is not empty, loop over the node, and find the matches that matches the val
+	current := n.head
+
+	// it more of the searchin op than the delete;
+	for current.next != nil && current.next.val != val {
+		current = current.next
+	}
+	if current.next != nil {
+		current.next = current.next.next
+	}
+}
+
+func (n *linkedList) prependNode(val int) {
+	// create a new node
+	newNode := &Node{val: val}
+	// it does not care if the node is empty or not;
+	// even if the node is not empty;
+	newNode.next = n.head
+	n.head = newNode
+
+}
 func main() {
 	var st stack
-
 	var q queue
-
 	st.push("tshewang")
+	st.pop()
 	q.pushq(9)
 	q.dequeue()
 
@@ -69,7 +134,6 @@ func main() {
 
 	// to remove the first element from the slice
 	names = names[1:]
-
 	// implementation of queue and stack in from the concepts of the slice
 
 	fmt.Println(names)
