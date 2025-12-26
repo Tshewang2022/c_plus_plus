@@ -66,6 +66,7 @@ package main
 
 // 	// map in go;
 // 	heights := map[string]int{
+
 // 		"apple":  5,
 // 		"banana": 3,
 // 	}
