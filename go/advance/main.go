@@ -114,6 +114,9 @@ func (n *linkedList) prependNode(val int) {
 	n.head = newNode
 
 }
+
+// it will be fun to work on the double linked list;
+
 func main() {
 	var st stack
 	var q queue
