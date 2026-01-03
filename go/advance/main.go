@@ -118,6 +118,8 @@ func (n *linkedList) prependNode(val int) {
 // it will be fun to work on the double linked list;
 
 func main() {
+	mapper := map[string]int{}
+	fmt.Println(mapper)
 	var st stack
 	var q queue
 	st.push("tshewang")
